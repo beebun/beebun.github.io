@@ -25,8 +25,8 @@
         </h1>
         <img id='keyboard_icon' src='keybd_closed.png'>
         <h2 class='stats'>
-            42 statements &nbsp;
-            <span class='run hide_run shortkey_r button_toggle_run'>42 run</span>
+            44 statements &nbsp;
+            <span class='run hide_run shortkey_r button_toggle_run'>44 run</span>
             <span class='mis shortkey_m button_toggle_mis'>0 missing</span>
             <span class='exc shortkey_x button_toggle_exc'>0 excluded</span>
             
@@ -119,6 +119,8 @@
 <p id='n54' class='stm run hide_run'><a href='#n54'>54</a></p>
 <p id='n55' class='stm run hide_run'><a href='#n55'>55</a></p>
 <p id='n56' class='stm run hide_run'><a href='#n56'>56</a></p>
+<p id='n57' class='stm run hide_run'><a href='#n57'>57</a></p>
+<p id='n58' class='stm run hide_run'><a href='#n58'>58</a></p>
                 
             </td>
             <td class='text' valign='top'>
@@ -173,11 +175,13 @@
 <p id='t49' class='stm run hide_run'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>self</span><span class='op'>.</span><span class='nam'>assertEqual</span><span class='op'>(</span><span class='nam'>chapter</span><span class='op'>.</span><span class='nam'>order</span><span class='op'>,</span> <span class='nam'>order</span><span class='op'>)</span><span class='strut'>&nbsp;</span></p>
 <p id='t50' class='stm run hide_run'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>order</span> <span class='op'>+=</span> <span class='num'>1</span><span class='strut'>&nbsp;</span></p>
 <p id='t51' class='pln'><span class='strut'>&nbsp;</span></p>
-<p id='t52' class='stm run hide_run'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='key'>def</span> <span class='nam'>test_get_last_revision_history</span><span class='op'>(</span><span class='nam'>self</span><span class='op'>)</span><span class='op'>:</span><span class='strut'>&nbsp;</span></p>
+<p id='t52' class='stm run hide_run'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='key'>def</span> <span class='nam'>test_get_last_revision_history_exists</span><span class='op'>(</span><span class='nam'>self</span><span class='op'>)</span><span class='op'>:</span><span class='strut'>&nbsp;</span></p>
 <p id='t53' class='stm run hide_run'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>last_revision_history</span> <span class='op'>=</span> <span class='nam'>None</span><span class='strut'>&nbsp;</span></p>
-<p id='t54' class='stm run hide_run'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='key'>for</span> <span class='nam'>i</span> <span class='key'>in</span> <span class='nam'>range</span><span class='op'>(</span><span class='num'>0</span><span class='op'>,</span> <span class='num'>5</span><span class='op'>)</span><span class='op'>:</span><span class='strut'>&nbsp;</span></p>
-<p id='t55' class='stm run hide_run'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>last_revision_history</span> <span class='op'>=</span> <span class='nam'>mommy</span><span class='op'>.</span><span class='nam'>make</span><span class='op'>(</span><span class='str'>&#39;BookHistory&#39;</span><span class='op'>,</span> <span class='nam'>book</span><span class='op'>=</span><span class='nam'>self</span><span class='op'>.</span><span class='nam'>book</span><span class='op'>)</span><span class='strut'>&nbsp;</span></p>
-<p id='t56' class='stm run hide_run'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>self</span><span class='op'>.</span><span class='nam'>assertEqual</span><span class='op'>(</span><span class='nam'>self</span><span class='op'>.</span><span class='nam'>book</span><span class='op'>.</span><span class='nam'>get_last_revision_history</span><span class='op'>(</span><span class='op'>)</span><span class='op'>,</span> <span class='nam'>last_revision_history</span><span class='op'>)</span><span class='strut'>&nbsp;</span></p>
+<p id='t54' class='stm run hide_run'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>self</span><span class='op'>.</span><span class='nam'>book</span><span class='op'>.</span><span class='nam'>history</span><span class='op'>.</span><span class='nam'>all</span><span class='op'>(</span><span class='op'>)</span><span class='op'>.</span><span class='nam'>delete</span><span class='op'>(</span><span class='op'>)</span><span class='strut'>&nbsp;</span></p>
+<p id='t55' class='stm run hide_run'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>self</span><span class='op'>.</span><span class='nam'>assertEqual</span><span class='op'>(</span><span class='nam'>self</span><span class='op'>.</span><span class='nam'>book</span><span class='op'>.</span><span class='nam'>get_last_revision_history</span><span class='op'>(</span><span class='op'>)</span><span class='op'>,</span> <span class='nam'>False</span><span class='op'>)</span><span class='strut'>&nbsp;</span></p>
+<p id='t56' class='stm run hide_run'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='key'>for</span> <span class='nam'>i</span> <span class='key'>in</span> <span class='nam'>range</span><span class='op'>(</span><span class='num'>0</span><span class='op'>,</span> <span class='num'>5</span><span class='op'>)</span><span class='op'>:</span><span class='strut'>&nbsp;</span></p>
+<p id='t57' class='stm run hide_run'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>last_revision_history</span> <span class='op'>=</span> <span class='nam'>mommy</span><span class='op'>.</span><span class='nam'>make</span><span class='op'>(</span><span class='str'>&#39;BookHistory&#39;</span><span class='op'>,</span> <span class='nam'>book</span><span class='op'>=</span><span class='nam'>self</span><span class='op'>.</span><span class='nam'>book</span><span class='op'>)</span><span class='strut'>&nbsp;</span></p>
+<p id='t58' class='stm run hide_run'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>self</span><span class='op'>.</span><span class='nam'>assertEqual</span><span class='op'>(</span><span class='nam'>self</span><span class='op'>.</span><span class='nam'>book</span><span class='op'>.</span><span class='nam'>get_last_revision_history</span><span class='op'>(</span><span class='op'>)</span><span class='op'>,</span> <span class='nam'>last_revision_history</span><span class='op'>)</span><span class='strut'>&nbsp;</span></p>
                 
             </td>
         </tr>
