@@ -25,8 +25,8 @@
         </h1>
         <img id='keyboard_icon' src='keybd_closed.png'>
         <h2 class='stats'>
-            11 statements &nbsp;
-            <span class='run hide_run shortkey_r button_toggle_run'>11 run</span>
+            13 statements &nbsp;
+            <span class='run hide_run shortkey_r button_toggle_run'>13 run</span>
             <span class='mis shortkey_m button_toggle_mis'>0 missing</span>
             <span class='exc shortkey_x button_toggle_exc'>0 excluded</span>
             
@@ -68,17 +68,24 @@
 <p id='n3' class='stm run hide_run'><a href='#n3'>3</a></p>
 <p id='n4' class='stm run hide_run'><a href='#n4'>4</a></p>
 <p id='n5' class='stm run hide_run'><a href='#n5'>5</a></p>
-<p id='n6' class='pln'><a href='#n6'>6</a></p>
-<p id='n7' class='pln'><a href='#n7'>7</a></p>
-<p id='n8' class='stm run hide_run'><a href='#n8'>8</a></p>
-<p id='n9' class='stm run hide_run'><a href='#n9'>9</a></p>
+<p id='n6' class='stm run hide_run'><a href='#n6'>6</a></p>
+<p id='n7' class='stm run hide_run'><a href='#n7'>7</a></p>
+<p id='n8' class='pln'><a href='#n8'>8</a></p>
+<p id='n9' class='pln'><a href='#n9'>9</a></p>
 <p id='n10' class='stm run hide_run'><a href='#n10'>10</a></p>
 <p id='n11' class='stm run hide_run'><a href='#n11'>11</a></p>
-<p id='n12' class='pln'><a href='#n12'>12</a></p>
+<p id='n12' class='stm run hide_run'><a href='#n12'>12</a></p>
 <p id='n13' class='stm run hide_run'><a href='#n13'>13</a></p>
 <p id='n14' class='pln'><a href='#n14'>14</a></p>
-<p id='n15' class='pln'><a href='#n15'>15</a></p>
-<p id='n16' class='stm run hide_run'><a href='#n16'>16</a></p>
+<p id='n15' class='stm run hide_run'><a href='#n15'>15</a></p>
+<p id='n16' class='pln'><a href='#n16'>16</a></p>
+<p id='n17' class='pln'><a href='#n17'>17</a></p>
+<p id='n18' class='pln'><a href='#n18'>18</a></p>
+<p id='n19' class='pln'><a href='#n19'>19</a></p>
+<p id='n20' class='pln'><a href='#n20'>20</a></p>
+<p id='n21' class='pln'><a href='#n21'>21</a></p>
+<p id='n22' class='pln'><a href='#n22'>22</a></p>
+<p id='n23' class='stm run hide_run'><a href='#n23'>23</a></p>
                 
             </td>
             <td class='text' valign='top'>
@@ -87,17 +94,24 @@
 <p id='t3' class='stm run hide_run'><span class='key'>from</span> <span class='nam'>teach</span><span class='op'>.</span><span class='nam'>views</span><span class='op'>.</span><span class='nam'>daily_quest_templates</span> <span class='key'>import</span> <span class='nam'>DailyQuestTemplateView</span><span class='strut'>&nbsp;</span></p>
 <p id='t4' class='stm run hide_run'><span class='key'>from</span> <span class='nam'>teach</span><span class='op'>.</span><span class='nam'>views</span><span class='op'>.</span><span class='nam'>teacher_tags</span> <span class='key'>import</span> <span class='nam'>TeacherTagView</span><span class='strut'>&nbsp;</span></p>
 <p id='t5' class='stm run hide_run'><span class='key'>from</span> <span class='nam'>teach</span><span class='op'>.</span><span class='nam'>views</span><span class='op'>.</span><span class='nam'>teacher_chapters</span> <span class='key'>import</span> <span class='nam'>TeacherChapterView</span><span class='strut'>&nbsp;</span></p>
-<p id='t6' class='pln'><span class='strut'>&nbsp;</span></p>
-<p id='t7' class='pln'><span class='strut'>&nbsp;</span></p>
-<p id='t8' class='stm run hide_run'><span class='nam'>router</span> <span class='op'>=</span> <span class='nam'>routers</span><span class='op'>.</span><span class='nam'>DefaultRouter</span><span class='op'>(</span><span class='op'>)</span><span class='strut'>&nbsp;</span></p>
-<p id='t9' class='stm run hide_run'><span class='nam'>router</span><span class='op'>.</span><span class='nam'>register</span><span class='op'>(</span><span class='str'>r&#39;daily_quest_templates&#39;</span><span class='op'>,</span> <span class='nam'>DailyQuestTemplateView</span><span class='op'>)</span><span class='strut'>&nbsp;</span></p>
-<p id='t10' class='stm run hide_run'><span class='nam'>router</span><span class='op'>.</span><span class='nam'>register</span><span class='op'>(</span><span class='str'>r&#39;teacher_tags&#39;</span><span class='op'>,</span> <span class='nam'>TeacherTagView</span><span class='op'>)</span><span class='strut'>&nbsp;</span></p>
-<p id='t11' class='stm run hide_run'><span class='nam'>router</span><span class='op'>.</span><span class='nam'>register</span><span class='op'>(</span><span class='str'>r&#39;teacher_chapters&#39;</span><span class='op'>,</span> <span class='nam'>TeacherChapterView</span><span class='op'>)</span><span class='strut'>&nbsp;</span></p>
-<p id='t12' class='pln'><span class='strut'>&nbsp;</span></p>
-<p id='t13' class='stm run hide_run'><span class='nam'>urlpatterns</span> <span class='op'>=</span> <span class='op'>[</span><span class='strut'>&nbsp;</span></p>
-<p id='t14' class='pln'>&nbsp; &nbsp; <span class='com'># url(r&#39;^summary/create/&#39;, create_summary_view),</span><span class='strut'>&nbsp;</span></p>
-<p id='t15' class='pln'><span class='op'>]</span><span class='strut'>&nbsp;</span></p>
-<p id='t16' class='stm run hide_run'><span class='nam'>urlpatterns</span> <span class='op'>+=</span> <span class='nam'>patterns</span><span class='op'>(</span><span class='str'>&#39;&#39;</span><span class='op'>,</span> <span class='nam'>url</span><span class='op'>(</span><span class='str'>r&#39;^&#39;</span><span class='op'>,</span> <span class='nam'>include</span><span class='op'>(</span><span class='nam'>router</span><span class='op'>.</span><span class='nam'>urls</span><span class='op'>)</span><span class='op'>)</span><span class='op'>,</span><span class='op'>)</span><span class='strut'>&nbsp;</span></p>
+<p id='t6' class='stm run hide_run'><span class='key'>from</span> <span class='nam'>teach</span><span class='op'>.</span><span class='nam'>views</span><span class='op'>.</span><span class='nam'>summaries</span> <span class='key'>import</span> <span class='nam'>daily_quest_summary_view</span><span class='op'>,</span> <span class='nam'>leaderboard_view</span><span class='op'>,</span> <span class='nam'>class_ranking_view</span><span class='op'>,</span> <span class='nam'>daily_quest_daily_summary</span><span class='op'>,</span> <span class='nam'>student_list_summary_view</span><span class='strut'>&nbsp;</span></p>
+<p id='t7' class='stm run hide_run'><span class='key'>from</span> <span class='nam'>teach</span><span class='op'>.</span><span class='nam'>views</span><span class='op'>.</span><span class='nam'>teacher_news_feed</span> <span class='key'>import</span> <span class='nam'>teacher_news_feed_view</span><span class='strut'>&nbsp;</span></p>
+<p id='t8' class='pln'><span class='strut'>&nbsp;</span></p>
+<p id='t9' class='pln'><span class='strut'>&nbsp;</span></p>
+<p id='t10' class='stm run hide_run'><span class='nam'>router</span> <span class='op'>=</span> <span class='nam'>routers</span><span class='op'>.</span><span class='nam'>DefaultRouter</span><span class='op'>(</span><span class='op'>)</span><span class='strut'>&nbsp;</span></p>
+<p id='t11' class='stm run hide_run'><span class='nam'>router</span><span class='op'>.</span><span class='nam'>register</span><span class='op'>(</span><span class='str'>r&#39;daily_quest_templates&#39;</span><span class='op'>,</span> <span class='nam'>DailyQuestTemplateView</span><span class='op'>)</span><span class='strut'>&nbsp;</span></p>
+<p id='t12' class='stm run hide_run'><span class='nam'>router</span><span class='op'>.</span><span class='nam'>register</span><span class='op'>(</span><span class='str'>r&#39;teacher_tags&#39;</span><span class='op'>,</span> <span class='nam'>TeacherTagView</span><span class='op'>)</span><span class='strut'>&nbsp;</span></p>
+<p id='t13' class='stm run hide_run'><span class='nam'>router</span><span class='op'>.</span><span class='nam'>register</span><span class='op'>(</span><span class='str'>r&#39;teacher_chapters&#39;</span><span class='op'>,</span> <span class='nam'>TeacherChapterView</span><span class='op'>)</span><span class='strut'>&nbsp;</span></p>
+<p id='t14' class='pln'><span class='strut'>&nbsp;</span></p>
+<p id='t15' class='stm run hide_run'><span class='nam'>urlpatterns</span> <span class='op'>=</span> <span class='op'>[</span><span class='strut'>&nbsp;</span></p>
+<p id='t16' class='pln'>&nbsp; &nbsp; <span class='nam'>url</span><span class='op'>(</span><span class='str'>r&#39;^summaries/daily_quest_daily_summary/&#39;</span><span class='op'>,</span> <span class='nam'>daily_quest_daily_summary</span><span class='op'>)</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t17' class='pln'>&nbsp; &nbsp; <span class='nam'>url</span><span class='op'>(</span><span class='str'>r&#39;^summaries/daily_quest_summary/&#39;</span><span class='op'>,</span> <span class='nam'>daily_quest_summary_view</span><span class='op'>)</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t18' class='pln'>&nbsp; &nbsp; <span class='nam'>url</span><span class='op'>(</span><span class='str'>r&#39;^summaries/leaderboard/&#39;</span><span class='op'>,</span> <span class='nam'>leaderboard_view</span><span class='op'>)</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t19' class='pln'>&nbsp; &nbsp; <span class='nam'>url</span><span class='op'>(</span><span class='str'>r&#39;^summaries/class_ranking/&#39;</span><span class='op'>,</span> <span class='nam'>class_ranking_view</span><span class='op'>)</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t20' class='pln'>&nbsp; &nbsp; <span class='nam'>url</span><span class='op'>(</span><span class='str'>r&#39;^summaries/student_list/&#39;</span><span class='op'>,</span> <span class='nam'>student_list_summary_view</span><span class='op'>)</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t21' class='pln'>&nbsp; &nbsp; <span class='nam'>url</span><span class='op'>(</span><span class='str'>r&#39;^news_feed/teacher/&#39;</span><span class='op'>,</span> <span class='nam'>teacher_news_feed_view</span><span class='op'>)</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t22' class='pln'><span class='op'>]</span><span class='strut'>&nbsp;</span></p>
+<p id='t23' class='stm run hide_run'><span class='nam'>urlpatterns</span> <span class='op'>+=</span> <span class='nam'>patterns</span><span class='op'>(</span><span class='str'>&#39;&#39;</span><span class='op'>,</span> <span class='nam'>url</span><span class='op'>(</span><span class='str'>r&#39;^&#39;</span><span class='op'>,</span> <span class='nam'>include</span><span class='op'>(</span><span class='nam'>router</span><span class='op'>.</span><span class='nam'>urls</span><span class='op'>)</span><span class='op'>)</span><span class='op'>,</span><span class='op'>)</span><span class='strut'>&nbsp;</span></p>
                 
             </td>
         </tr>
