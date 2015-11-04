@@ -85,7 +85,8 @@
 <p id='n20' class='pln'><a href='#n20'>20</a></p>
 <p id='n21' class='pln'><a href='#n21'>21</a></p>
 <p id='n22' class='pln'><a href='#n22'>22</a></p>
-<p id='n23' class='stm run hide_run'><a href='#n23'>23</a></p>
+<p id='n23' class='pln'><a href='#n23'>23</a></p>
+<p id='n24' class='stm run hide_run'><a href='#n24'>24</a></p>
                 
             </td>
             <td class='text' valign='top'>
@@ -94,7 +95,7 @@
 <p id='t3' class='stm run hide_run'><span class='key'>from</span> <span class='nam'>teach</span><span class='op'>.</span><span class='nam'>views</span><span class='op'>.</span><span class='nam'>daily_quest_templates</span> <span class='key'>import</span> <span class='nam'>DailyQuestTemplateView</span><span class='strut'>&nbsp;</span></p>
 <p id='t4' class='stm run hide_run'><span class='key'>from</span> <span class='nam'>teach</span><span class='op'>.</span><span class='nam'>views</span><span class='op'>.</span><span class='nam'>teacher_tags</span> <span class='key'>import</span> <span class='nam'>TeacherTagView</span><span class='strut'>&nbsp;</span></p>
 <p id='t5' class='stm run hide_run'><span class='key'>from</span> <span class='nam'>teach</span><span class='op'>.</span><span class='nam'>views</span><span class='op'>.</span><span class='nam'>teacher_chapters</span> <span class='key'>import</span> <span class='nam'>TeacherChapterView</span><span class='strut'>&nbsp;</span></p>
-<p id='t6' class='stm run hide_run'><span class='key'>from</span> <span class='nam'>teach</span><span class='op'>.</span><span class='nam'>views</span><span class='op'>.</span><span class='nam'>summaries</span> <span class='key'>import</span> <span class='nam'>daily_quest_summary_view</span><span class='op'>,</span> <span class='nam'>leaderboard_view</span><span class='op'>,</span> <span class='nam'>class_ranking_view</span><span class='op'>,</span> <span class='nam'>daily_quest_daily_summary</span><span class='op'>,</span> <span class='nam'>student_list_summary_view</span><span class='strut'>&nbsp;</span></p>
+<p id='t6' class='stm run hide_run'><span class='key'>from</span> <span class='nam'>teach</span><span class='op'>.</span><span class='nam'>views</span><span class='op'>.</span><span class='nam'>summaries</span> <span class='key'>import</span> <span class='op'>*</span><span class='strut'>&nbsp;</span></p>
 <p id='t7' class='stm run hide_run'><span class='key'>from</span> <span class='nam'>teach</span><span class='op'>.</span><span class='nam'>views</span><span class='op'>.</span><span class='nam'>teacher_news_feed</span> <span class='key'>import</span> <span class='nam'>teacher_news_feed_view</span><span class='strut'>&nbsp;</span></p>
 <p id='t8' class='pln'><span class='strut'>&nbsp;</span></p>
 <p id='t9' class='pln'><span class='strut'>&nbsp;</span></p>
@@ -109,9 +110,10 @@
 <p id='t18' class='pln'>&nbsp; &nbsp; <span class='nam'>url</span><span class='op'>(</span><span class='str'>r&#39;^summaries/leaderboard/&#39;</span><span class='op'>,</span> <span class='nam'>leaderboard_view</span><span class='op'>)</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
 <p id='t19' class='pln'>&nbsp; &nbsp; <span class='nam'>url</span><span class='op'>(</span><span class='str'>r&#39;^summaries/class_ranking/&#39;</span><span class='op'>,</span> <span class='nam'>class_ranking_view</span><span class='op'>)</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
 <p id='t20' class='pln'>&nbsp; &nbsp; <span class='nam'>url</span><span class='op'>(</span><span class='str'>r&#39;^summaries/student_list/&#39;</span><span class='op'>,</span> <span class='nam'>student_list_summary_view</span><span class='op'>)</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
-<p id='t21' class='pln'>&nbsp; &nbsp; <span class='nam'>url</span><span class='op'>(</span><span class='str'>r&#39;^news_feed/teacher/&#39;</span><span class='op'>,</span> <span class='nam'>teacher_news_feed_view</span><span class='op'>)</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
-<p id='t22' class='pln'><span class='op'>]</span><span class='strut'>&nbsp;</span></p>
-<p id='t23' class='stm run hide_run'><span class='nam'>urlpatterns</span> <span class='op'>+=</span> <span class='nam'>patterns</span><span class='op'>(</span><span class='str'>&#39;&#39;</span><span class='op'>,</span> <span class='nam'>url</span><span class='op'>(</span><span class='str'>r&#39;^&#39;</span><span class='op'>,</span> <span class='nam'>include</span><span class='op'>(</span><span class='nam'>router</span><span class='op'>.</span><span class='nam'>urls</span><span class='op'>)</span><span class='op'>)</span><span class='op'>,</span><span class='op'>)</span><span class='strut'>&nbsp;</span></p>
+<p id='t21' class='pln'>&nbsp; &nbsp; <span class='nam'>url</span><span class='op'>(</span><span class='str'>r&#39;^summaries/top_answered_questions/&#39;</span><span class='op'>,</span> <span class='nam'>top_answered_questions_summary_view</span><span class='op'>)</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t22' class='pln'>&nbsp; &nbsp; <span class='nam'>url</span><span class='op'>(</span><span class='str'>r&#39;^news_feed/teacher/&#39;</span><span class='op'>,</span> <span class='nam'>teacher_news_feed_view</span><span class='op'>)</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t23' class='pln'><span class='op'>]</span><span class='strut'>&nbsp;</span></p>
+<p id='t24' class='stm run hide_run'><span class='nam'>urlpatterns</span> <span class='op'>+=</span> <span class='nam'>patterns</span><span class='op'>(</span><span class='str'>&#39;&#39;</span><span class='op'>,</span> <span class='nam'>url</span><span class='op'>(</span><span class='str'>r&#39;^&#39;</span><span class='op'>,</span> <span class='nam'>include</span><span class='op'>(</span><span class='nam'>router</span><span class='op'>.</span><span class='nam'>urls</span><span class='op'>)</span><span class='op'>)</span><span class='op'>,</span><span class='op'>)</span><span class='strut'>&nbsp;</span></p>
                 
             </td>
         </tr>
