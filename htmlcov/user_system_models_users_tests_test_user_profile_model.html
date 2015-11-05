@@ -25,8 +25,8 @@
         </h1>
         <img id='keyboard_icon' src='keybd_closed.png'>
         <h2 class='stats'>
-            133 statements &nbsp;
-            <span class='run hide_run shortkey_r button_toggle_run'>133 run</span>
+            142 statements &nbsp;
+            <span class='run hide_run shortkey_r button_toggle_run'>142 run</span>
             <span class='mis shortkey_m button_toggle_mis'>0 missing</span>
             <span class='exc shortkey_x button_toggle_exc'>0 excluded</span>
             
@@ -245,6 +245,16 @@
 <p id='n180' class='pln'><a href='#n180'>180</a></p>
 <p id='n181' class='stm run hide_run'><a href='#n181'>181</a></p>
 <p id='n182' class='pln'><a href='#n182'>182</a></p>
+<p id='n183' class='stm run hide_run'><a href='#n183'>183</a></p>
+<p id='n184' class='stm run hide_run'><a href='#n184'>184</a></p>
+<p id='n185' class='stm run hide_run'><a href='#n185'>185</a></p>
+<p id='n186' class='stm run hide_run'><a href='#n186'>186</a></p>
+<p id='n187' class='stm run hide_run'><a href='#n187'>187</a></p>
+<p id='n188' class='stm run hide_run'><a href='#n188'>188</a></p>
+<p id='n189' class='pln'><a href='#n189'>189</a></p>
+<p id='n190' class='stm run hide_run'><a href='#n190'>190</a></p>
+<p id='n191' class='stm run hide_run'><a href='#n191'>191</a></p>
+<p id='n192' class='stm run hide_run'><a href='#n192'>192</a></p>
                 
             </td>
             <td class='text' valign='top'>
@@ -430,6 +440,16 @@
 <p id='t180' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='op'>}</span><span class='strut'>&nbsp;</span></p>
 <p id='t181' class='stm run hide_run'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>self</span><span class='op'>.</span><span class='nam'>assertEqual</span><span class='op'>(</span><span class='nam'>self</span><span class='op'>.</span><span class='nam'>user_profile</span><span class='op'>.</span><span class='nam'>get_role_names_list</span><span class='op'>(</span><span class='op'>)</span><span class='op'>,</span> <span class='nam'>expected</span><span class='op'>)</span><span class='strut'>&nbsp;</span></p>
 <p id='t182' class='pln'><span class='strut'>&nbsp;</span></p>
+<p id='t183' class='stm run hide_run'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='key'>def</span> <span class='nam'>test_get_point_for_student</span><span class='op'>(</span><span class='nam'>self</span><span class='op'>)</span><span class='op'>:</span><span class='strut'>&nbsp;</span></p>
+<p id='t184' class='stm run hide_run'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>self</span><span class='op'>.</span><span class='nam'>user_profile</span><span class='op'>.</span><span class='nam'>roles</span><span class='op'>.</span><span class='nam'>add</span><span class='op'>(</span><span class='nam'>self</span><span class='op'>.</span><span class='nam'>student_role</span><span class='op'>)</span><span class='strut'>&nbsp;</span></p>
+<p id='t185' class='stm run hide_run'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>user</span> <span class='op'>=</span> <span class='nam'>self</span><span class='op'>.</span><span class='nam'>user_profile</span><span class='op'>.</span><span class='nam'>get_user</span><span class='op'>(</span><span class='op'>)</span><span class='strut'>&nbsp;</span></p>
+<p id='t186' class='stm run hide_run'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>point</span> <span class='op'>=</span> <span class='num'>3700</span><span class='strut'>&nbsp;</span></p>
+<p id='t187' class='stm run hide_run'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>mommy</span><span class='op'>.</span><span class='nam'>make</span><span class='op'>(</span><span class='str'>&#39;StudentProfile&#39;</span><span class='op'>,</span> <span class='nam'>user</span><span class='op'>=</span><span class='nam'>user</span><span class='op'>,</span> <span class='nam'>point</span><span class='op'>=</span><span class='nam'>point</span><span class='op'>)</span><span class='strut'>&nbsp;</span></p>
+<p id='t188' class='stm run hide_run'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>self</span><span class='op'>.</span><span class='nam'>assertEqual</span><span class='op'>(</span><span class='nam'>self</span><span class='op'>.</span><span class='nam'>user_profile</span><span class='op'>.</span><span class='nam'>get_point</span><span class='op'>(</span><span class='op'>)</span><span class='op'>,</span> <span class='nam'>point</span><span class='op'>)</span><span class='strut'>&nbsp;</span></p>
+<p id='t189' class='pln'><span class='strut'>&nbsp;</span></p>
+<p id='t190' class='stm run hide_run'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='key'>def</span> <span class='nam'>test_get_point_for_teacher</span><span class='op'>(</span><span class='nam'>self</span><span class='op'>)</span><span class='op'>:</span><span class='strut'>&nbsp;</span></p>
+<p id='t191' class='stm run hide_run'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>self</span><span class='op'>.</span><span class='nam'>user_profile</span><span class='op'>.</span><span class='nam'>roles</span><span class='op'>.</span><span class='nam'>add</span><span class='op'>(</span><span class='nam'>self</span><span class='op'>.</span><span class='nam'>teacher_role</span><span class='op'>)</span><span class='strut'>&nbsp;</span></p>
+<p id='t192' class='stm run hide_run'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>self</span><span class='op'>.</span><span class='nam'>assertEqual</span><span class='op'>(</span><span class='nam'>self</span><span class='op'>.</span><span class='nam'>user_profile</span><span class='op'>.</span><span class='nam'>get_point</span><span class='op'>(</span><span class='op'>)</span><span class='op'>,</span> <span class='nam'>False</span><span class='op'>)</span><span class='strut'>&nbsp;</span></p>
                 
             </td>
         </tr>
