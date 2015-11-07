@@ -5,7 +5,7 @@
     
     
     <meta http-equiv='X-UA-Compatible' content='IE=emulateIE7' />
-    <title>Coverage for learn/models/daily_quests/daily_quest_question_history_model: 61%</title>
+    <title>Coverage for learn/models/daily_quests/daily_quest_question_history_model: 59%</title>
     <link rel='stylesheet' href='style.css' type='text/css'>
     
     <script type='text/javascript' src='jquery.min.js'></script>
@@ -21,13 +21,13 @@
 <div id='header'>
     <div class='content'>
         <h1>Coverage for <b>learn/models/daily_quests/daily_quest_question_history_model</b> :
-            <span class='pc_cov'>61%</span>
+            <span class='pc_cov'>59%</span>
         </h1>
         <img id='keyboard_icon' src='keybd_closed.png'>
         <h2 class='stats'>
-            65 statements &nbsp;
+            67 statements &nbsp;
             <span class='run hide_run shortkey_r button_toggle_run'>43 run</span>
-            <span class='mis shortkey_m button_toggle_mis'>22 missing</span>
+            <span class='mis shortkey_m button_toggle_mis'>24 missing</span>
             <span class='exc shortkey_x button_toggle_exc'>0 excluded</span>
             
                 <span class='par run hide_run shortkey_p button_toggle_par'>0 partial</span>
@@ -143,16 +143,18 @@
 <p id='n78' class='stm mis'><a href='#n78'>78</a></p>
 <p id='n79' class='stm mis'><a href='#n79'>79</a></p>
 <p id='n80' class='stm mis'><a href='#n80'>80</a></p>
-<p id='n81' class='pln'><a href='#n81'>81</a></p>
-<p id='n82' class='stm run hide_run'><a href='#n82'>82</a></p>
-<p id='n83' class='stm mis'><a href='#n83'>83</a></p>
-<p id='n84' class='stm mis'><a href='#n84'>84</a></p>
-<p id='n85' class='pln'><a href='#n85'>85</a></p>
-<p id='n86' class='pln'><a href='#n86'>86</a></p>
+<p id='n81' class='stm mis'><a href='#n81'>81</a></p>
+<p id='n82' class='stm mis'><a href='#n82'>82</a></p>
+<p id='n83' class='pln'><a href='#n83'>83</a></p>
+<p id='n84' class='stm run hide_run'><a href='#n84'>84</a></p>
+<p id='n85' class='stm mis'><a href='#n85'>85</a></p>
+<p id='n86' class='stm mis'><a href='#n86'>86</a></p>
 <p id='n87' class='pln'><a href='#n87'>87</a></p>
 <p id='n88' class='pln'><a href='#n88'>88</a></p>
-<p id='n89' class='stm mis'><a href='#n89'>89</a></p>
-<p id='n90' class='stm mis'><a href='#n90'>90</a></p>
+<p id='n89' class='pln'><a href='#n89'>89</a></p>
+<p id='n90' class='pln'><a href='#n90'>90</a></p>
+<p id='n91' class='stm mis'><a href='#n91'>91</a></p>
+<p id='n92' class='stm mis'><a href='#n92'>92</a></p>
                 
             </td>
             <td class='text' valign='top'>
@@ -233,19 +235,21 @@
 <p id='t75' class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='key'>if</span> <span class='nam'>is_correct</span><span class='op'>:</span><span class='strut'>&nbsp;</span></p>
 <p id='t76' class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>student</span> <span class='op'>=</span> <span class='nam'>self</span><span class='op'>.</span><span class='nam'>get_student</span><span class='op'>(</span><span class='op'>)</span><span class='strut'>&nbsp;</span></p>
 <p id='t77' class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>student_profile</span> <span class='op'>=</span> <span class='nam'>student</span><span class='op'>.</span><span class='nam'>student_profile</span><span class='strut'>&nbsp;</span></p>
-<p id='t78' class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='key'>if</span> <span class='nam'>self</span><span class='op'>.</span><span class='nam'>get_is_completed_on_time</span><span class='op'>(</span><span class='op'>)</span><span class='op'>:</span><span class='strut'>&nbsp;</span></p>
-<p id='t79' class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>self</span><span class='op'>.</span><span class='nam'>create_point_history</span><span class='op'>(</span><span class='num'>10</span><span class='op'>)</span><span class='strut'>&nbsp;</span></p>
-<p id='t80' class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>student_profile</span><span class='op'>.</span><span class='nam'>add_point</span><span class='op'>(</span><span class='num'>10</span><span class='op'>)</span><span class='strut'>&nbsp;</span></p>
-<p id='t81' class='pln'><span class='strut'>&nbsp;</span></p>
-<p id='t82' class='stm run hide_run'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='key'>def</span> <span class='nam'>create_point_history</span><span class='op'>(</span><span class='nam'>self</span><span class='op'>,</span> <span class='nam'>point</span><span class='op'>)</span><span class='op'>:</span><span class='strut'>&nbsp;</span></p>
-<p id='t83' class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>point_type</span> <span class='op'>=</span> <span class='nam'>PointType</span><span class='op'>.</span><span class='nam'>objects</span><span class='op'>.</span><span class='nam'>get</span><span class='op'>(</span><span class='nam'>short_name</span><span class='op'>=</span><span class='str'>&#39;correct-answer&#39;</span><span class='op'>)</span><span class='strut'>&nbsp;</span></p>
-<p id='t84' class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>point_history</span> <span class='op'>=</span> <span class='nam'>PointHistory</span><span class='op'>.</span><span class='nam'>objects</span><span class='op'>.</span><span class='nam'>create</span><span class='op'>(</span><span class='strut'>&nbsp;</span></p>
-<p id='t85' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>point</span><span class='op'>=</span><span class='nam'>point</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
-<p id='t86' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>student</span><span class='op'>=</span><span class='nam'>self</span><span class='op'>.</span><span class='nam'>get_student</span><span class='op'>(</span><span class='op'>)</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
-<p id='t87' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>type</span><span class='op'>=</span><span class='nam'>point_type</span><span class='strut'>&nbsp;</span></p>
-<p id='t88' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='op'>)</span><span class='strut'>&nbsp;</span></p>
-<p id='t89' class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>self</span><span class='op'>.</span><span class='nam'>point_history</span> <span class='op'>=</span> <span class='nam'>point_history</span><span class='strut'>&nbsp;</span></p>
-<p id='t90' class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>self</span><span class='op'>.</span><span class='nam'>save</span><span class='op'>(</span><span class='op'>)</span><span class='strut'>&nbsp;</span></p>
+<p id='t78' class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>daily_quest</span> <span class='op'>=</span> <span class='nam'>self</span><span class='op'>.</span><span class='nam'>get_daily_quest</span><span class='op'>(</span><span class='op'>)</span><span class='strut'>&nbsp;</span></p>
+<p id='t79' class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>daily_quest_template</span> <span class='op'>=</span> <span class='nam'>daily_quest</span><span class='op'>.</span><span class='nam'>get_daily_quest_template</span><span class='op'>(</span><span class='op'>)</span><span class='strut'>&nbsp;</span></p>
+<p id='t80' class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='key'>if</span> <span class='nam'>self</span><span class='op'>.</span><span class='nam'>get_is_completed_on_time</span><span class='op'>(</span><span class='op'>)</span> <span class='key'>or</span> <span class='nam'>daily_quest_template</span><span class='op'>.</span><span class='nam'>get_is_pinned</span><span class='op'>(</span><span class='op'>)</span><span class='op'>:</span><span class='strut'>&nbsp;</span></p>
+<p id='t81' class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>self</span><span class='op'>.</span><span class='nam'>create_point_history</span><span class='op'>(</span><span class='num'>10</span><span class='op'>)</span><span class='strut'>&nbsp;</span></p>
+<p id='t82' class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>student_profile</span><span class='op'>.</span><span class='nam'>add_point</span><span class='op'>(</span><span class='num'>10</span><span class='op'>)</span><span class='strut'>&nbsp;</span></p>
+<p id='t83' class='pln'><span class='strut'>&nbsp;</span></p>
+<p id='t84' class='stm run hide_run'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='key'>def</span> <span class='nam'>create_point_history</span><span class='op'>(</span><span class='nam'>self</span><span class='op'>,</span> <span class='nam'>point</span><span class='op'>)</span><span class='op'>:</span><span class='strut'>&nbsp;</span></p>
+<p id='t85' class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>point_type</span> <span class='op'>=</span> <span class='nam'>PointType</span><span class='op'>.</span><span class='nam'>objects</span><span class='op'>.</span><span class='nam'>get</span><span class='op'>(</span><span class='nam'>short_name</span><span class='op'>=</span><span class='str'>&#39;correct-answer&#39;</span><span class='op'>)</span><span class='strut'>&nbsp;</span></p>
+<p id='t86' class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>point_history</span> <span class='op'>=</span> <span class='nam'>PointHistory</span><span class='op'>.</span><span class='nam'>objects</span><span class='op'>.</span><span class='nam'>create</span><span class='op'>(</span><span class='strut'>&nbsp;</span></p>
+<p id='t87' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>point</span><span class='op'>=</span><span class='nam'>point</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t88' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>student</span><span class='op'>=</span><span class='nam'>self</span><span class='op'>.</span><span class='nam'>get_student</span><span class='op'>(</span><span class='op'>)</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t89' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>type</span><span class='op'>=</span><span class='nam'>point_type</span><span class='strut'>&nbsp;</span></p>
+<p id='t90' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='op'>)</span><span class='strut'>&nbsp;</span></p>
+<p id='t91' class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>self</span><span class='op'>.</span><span class='nam'>point_history</span> <span class='op'>=</span> <span class='nam'>point_history</span><span class='strut'>&nbsp;</span></p>
+<p id='t92' class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>self</span><span class='op'>.</span><span class='nam'>save</span><span class='op'>(</span><span class='op'>)</span><span class='strut'>&nbsp;</span></p>
                 
             </td>
         </tr>
