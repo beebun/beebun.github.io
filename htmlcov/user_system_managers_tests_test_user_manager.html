@@ -5,7 +5,7 @@
     
     
     <meta http-equiv='X-UA-Compatible' content='IE=emulateIE7' />
-    <title>Coverage for user_system/managers/tests/test_user_manager: 100%</title>
+    <title>Coverage for user_system/managers/tests/test_user_manager: 99%</title>
     <link rel='stylesheet' href='style.css' type='text/css'>
     
     <script type='text/javascript' src='jquery.min.js'></script>
@@ -21,7 +21,7 @@
 <div id='header'>
     <div class='content'>
         <h1>Coverage for <b>user_system/managers/tests/test_user_manager</b> :
-            <span class='pc_cov'>100%</span>
+            <span class='pc_cov'>99%</span>
         </h1>
         <img id='keyboard_icon' src='keybd_closed.png'>
         <h2 class='stats'>
@@ -29,6 +29,8 @@
             <span class='run hide_run shortkey_r button_toggle_run'>99 run</span>
             <span class='mis shortkey_m button_toggle_mis'>0 missing</span>
             <span class='exc shortkey_x button_toggle_exc'>0 excluded</span>
+            
+                <span class='par run hide_run shortkey_p button_toggle_par'>1 partial</span>
             
         </h2>
     </div>
@@ -170,7 +172,7 @@
 <p id='n107' class='stm run hide_run'><a href='#n107'>107</a></p>
 <p id='n108' class='stm run hide_run'><a href='#n108'>108</a></p>
 <p id='n109' class='stm run hide_run'><a href='#n109'>109</a></p>
-<p id='n110' class='stm run hide_run'><a href='#n110'>110</a></p>
+<p id='n110' class='stm par run hide_run'><a href='#n110'>110</a></p>
 <p id='n111' class='stm run hide_run'><a href='#n111'>111</a></p>
 <p id='n112' class='stm run hide_run'><a href='#n112'>112</a></p>
 <p id='n113' class='stm run hide_run'><a href='#n113'>113</a></p>
@@ -290,7 +292,7 @@
 <p id='t107' class='stm run hide_run'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>classrooms</span> <span class='op'>=</span> <span class='nam'>user_manager</span><span class='op'>.</span><span class='nam'>get_classrooms_by_course</span><span class='op'>(</span><span class='nam'>self</span><span class='op'>.</span><span class='nam'>courses</span><span class='op'>[</span><span class='num'>0</span><span class='op'>]</span><span class='op'>)</span><span class='strut'>&nbsp;</span></p>
 <p id='t108' class='stm run hide_run'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>expected_classrooms</span> <span class='op'>=</span> <span class='op'>[</span><span class='op'>]</span><span class='strut'>&nbsp;</span></p>
 <p id='t109' class='stm run hide_run'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='key'>for</span> <span class='nam'>i</span> <span class='key'>in</span> <span class='nam'>range</span><span class='op'>(</span><span class='num'>0</span><span class='op'>,</span> <span class='nam'>len</span><span class='op'>(</span><span class='nam'>self</span><span class='op'>.</span><span class='nam'>classrooms</span><span class='op'>)</span><span class='op'>)</span><span class='op'>:</span><span class='strut'>&nbsp;</span></p>
-<p id='t110' class='stm run hide_run'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='key'>if</span> <span class='nam'>i</span><span class='op'>+</span><span class='num'>1</span> <span class='key'>in</span> <span class='nam'>self</span><span class='op'>.</span><span class='nam'>course_mappings</span><span class='op'>[</span><span class='num'>0</span><span class='op'>]</span><span class='op'>:</span><span class='strut'>&nbsp;</span></p>
+<p id='t110' class='stm par run hide_run'><span class='annotate' title='no jump to this line number'>109</span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='key'>if</span> <span class='nam'>i</span><span class='op'>+</span><span class='num'>1</span> <span class='key'>in</span> <span class='nam'>self</span><span class='op'>.</span><span class='nam'>course_mappings</span><span class='op'>[</span><span class='num'>0</span><span class='op'>]</span><span class='op'>:</span><span class='strut'>&nbsp;</span></p>
 <p id='t111' class='stm run hide_run'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>expected_classrooms</span><span class='op'>.</span><span class='nam'>append</span><span class='op'>(</span><span class='nam'>self</span><span class='op'>.</span><span class='nam'>classrooms</span><span class='op'>[</span><span class='nam'>i</span><span class='op'>]</span><span class='op'>)</span><span class='strut'>&nbsp;</span></p>
 <p id='t112' class='stm run hide_run'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>expected_classrooms</span><span class='op'>.</span><span class='nam'>reverse</span><span class='op'>(</span><span class='op'>)</span><span class='strut'>&nbsp;</span></p>
 <p id='t113' class='stm run hide_run'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>self</span><span class='op'>.</span><span class='nam'>assertEqual</span><span class='op'>(</span><span class='nam'>classrooms</span><span class='op'>,</span> <span class='nam'>expected_classrooms</span><span class='op'>)</span><span class='strut'>&nbsp;</span></p>
