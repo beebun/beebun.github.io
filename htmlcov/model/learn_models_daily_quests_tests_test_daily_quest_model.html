@@ -25,8 +25,8 @@
         </h1>
         <img id='keyboard_icon' src='keybd_closed.png'>
         <h2 class='stats'>
-            293 statements &nbsp;
-            <span class='run hide_run shortkey_r button_toggle_run'>293 run</span>
+            301 statements &nbsp;
+            <span class='run hide_run shortkey_r button_toggle_run'>301 run</span>
             <span class='mis shortkey_m button_toggle_mis'>0 missing</span>
             <span class='exc shortkey_x button_toggle_exc'>0 excluded</span>
             
@@ -453,9 +453,18 @@
 <p id='n388' class='pln'><a href='#n388'>388</a></p>
 <p id='n389' class='stm run hide_run'><a href='#n389'>389</a></p>
 <p id='n390' class='stm run hide_run'><a href='#n390'>390</a></p>
-<p id='n391' class='pln'><a href='#n391'>391</a></p>
+<p id='n391' class='stm run hide_run'><a href='#n391'>391</a></p>
 <p id='n392' class='stm run hide_run'><a href='#n392'>392</a></p>
 <p id='n393' class='stm run hide_run'><a href='#n393'>393</a></p>
+<p id='n394' class='stm run hide_run'><a href='#n394'>394</a></p>
+<p id='n395' class='stm run hide_run'><a href='#n395'>395</a></p>
+<p id='n396' class='stm run hide_run'><a href='#n396'>396</a></p>
+<p id='n397' class='pln'><a href='#n397'>397</a></p>
+<p id='n398' class='stm run hide_run'><a href='#n398'>398</a></p>
+<p id='n399' class='stm run hide_run'><a href='#n399'>399</a></p>
+<p id='n400' class='pln'><a href='#n400'>400</a></p>
+<p id='n401' class='stm run hide_run'><a href='#n401'>401</a></p>
+<p id='n402' class='stm run hide_run'><a href='#n402'>402</a></p>
                 
             </td>
             <td class='text' valign='top'>
@@ -844,14 +853,23 @@
 <p id='t383' class='stm run hide_run'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>daily_quest_question</span> <span class='op'>=</span> <span class='nam'>mommy</span><span class='op'>.</span><span class='nam'>make</span><span class='op'>(</span><span class='str'>&#39;DailyQuestQuestionHistory&#39;</span><span class='op'>,</span> <span class='nam'>daily_quest</span><span class='op'>=</span><span class='nam'>self</span><span class='op'>.</span><span class='nam'>daily_quest</span><span class='op'>)</span><span class='strut'>&nbsp;</span></p>
 <p id='t384' class='stm run hide_run'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>self</span><span class='op'>.</span><span class='nam'>assertEqual</span><span class='op'>(</span><span class='nam'>self</span><span class='op'>.</span><span class='nam'>daily_quest</span><span class='op'>.</span><span class='nam'>update_complete_daily_quest</span><span class='op'>(</span><span class='nam'>daily_quest_question</span><span class='op'>)</span><span class='op'>,</span> <span class='nam'>False</span><span class='op'>)</span><span class='strut'>&nbsp;</span></p>
 <p id='t385' class='pln'><span class='strut'>&nbsp;</span></p>
-<p id='t386' class='stm run hide_run'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='key'>def</span> <span class='nam'>test_get_is_allowed_daily_quest</span><span class='op'>(</span><span class='nam'>self</span><span class='op'>)</span><span class='op'>:</span><span class='strut'>&nbsp;</span></p>
-<p id='t387' class='stm run hide_run'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='key'>pass</span><span class='strut'>&nbsp;</span></p>
+<p id='t386' class='stm run hide_run'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='key'>def</span> <span class='nam'>test_get_is_allowed_daily_quest_no_date_groups</span><span class='op'>(</span><span class='nam'>self</span><span class='op'>)</span><span class='op'>:</span><span class='strut'>&nbsp;</span></p>
+<p id='t387' class='stm run hide_run'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>self</span><span class='op'>.</span><span class='nam'>assertEqual</span><span class='op'>(</span><span class='nam'>self</span><span class='op'>.</span><span class='nam'>daily_quest</span><span class='op'>.</span><span class='nam'>get_is_allowed_daily_quest</span><span class='op'>(</span><span class='op'>)</span><span class='op'>,</span> <span class='nam'>False</span><span class='op'>)</span><span class='strut'>&nbsp;</span></p>
 <p id='t388' class='pln'><span class='strut'>&nbsp;</span></p>
-<p id='t389' class='stm run hide_run'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='key'>def</span> <span class='nam'>test_get_is_available</span><span class='op'>(</span><span class='nam'>self</span><span class='op'>)</span><span class='op'>:</span><span class='strut'>&nbsp;</span></p>
-<p id='t390' class='stm run hide_run'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='key'>pass</span><span class='strut'>&nbsp;</span></p>
-<p id='t391' class='pln'><span class='strut'>&nbsp;</span></p>
-<p id='t392' class='stm run hide_run'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='key'>def</span> <span class='nam'>test_get_deadline_passed</span><span class='op'>(</span><span class='nam'>self</span><span class='op'>)</span><span class='op'>:</span><span class='strut'>&nbsp;</span></p>
-<p id='t393' class='stm run hide_run'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='key'>pass</span><span class='strut'>&nbsp;</span></p>
+<p id='t389' class='stm run hide_run'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='key'>def</span> <span class='nam'>test_get_is_allowed_daily_quest_with_date_groups</span><span class='op'>(</span><span class='nam'>self</span><span class='op'>)</span><span class='op'>:</span><span class='strut'>&nbsp;</span></p>
+<p id='t390' class='stm run hide_run'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>today</span> <span class='op'>=</span> <span class='nam'>time_helper</span><span class='op'>.</span><span class='nam'>get_today_date</span><span class='op'>(</span><span class='str'>&#39;Asia/Bangkok&#39;</span><span class='op'>)</span><span class='strut'>&nbsp;</span></p>
+<p id='t391' class='stm run hide_run'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>date_group</span> <span class='op'>=</span> <span class='nam'>mommy</span><span class='op'>.</span><span class='nam'>make</span><span class='op'>(</span><span class='str'>&#39;DailyQuestHistoryDateGroup&#39;</span><span class='op'>,</span> <span class='nam'>user</span><span class='op'>=</span><span class='nam'>self</span><span class='op'>.</span><span class='nam'>daily_quest</span><span class='op'>.</span><span class='nam'>get_student</span><span class='op'>(</span><span class='op'>)</span><span class='op'>,</span> <span class='nam'>course</span><span class='op'>=</span><span class='nam'>self</span><span class='op'>.</span><span class='nam'>daily_quest</span><span class='op'>.</span><span class='nam'>get_course</span><span class='op'>(</span><span class='op'>)</span><span class='op'>)</span><span class='strut'>&nbsp;</span></p>
+<p id='t392' class='stm run hide_run'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>allowed_date</span> <span class='op'>=</span> <span class='nam'>mommy</span><span class='op'>.</span><span class='nam'>make</span><span class='op'>(</span><span class='str'>&#39;AllowedDailyQuestHistoryDate&#39;</span><span class='op'>,</span> <span class='nam'>date</span><span class='op'>=</span><span class='nam'>self</span><span class='op'>.</span><span class='nam'>daily_quest</span><span class='op'>.</span><span class='nam'>get_assigned_date</span><span class='op'>(</span><span class='op'>)</span><span class='op'>)</span><span class='strut'>&nbsp;</span></p>
+<p id='t393' class='stm run hide_run'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>daily_quest_date</span> <span class='op'>=</span> <span class='nam'>mommy</span><span class='op'>.</span><span class='nam'>make</span><span class='op'>(</span><span class='str'>&#39;DailyQuestHistoryDate&#39;</span><span class='op'>,</span> <span class='nam'>date</span><span class='op'>=</span><span class='nam'>today</span><span class='op'>)</span><span class='strut'>&nbsp;</span></p>
+<p id='t394' class='stm run hide_run'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>date_group</span><span class='op'>.</span><span class='nam'>allowed_dates</span><span class='op'>.</span><span class='nam'>add</span><span class='op'>(</span><span class='nam'>allowed_date</span><span class='op'>)</span><span class='strut'>&nbsp;</span></p>
+<p id='t395' class='stm run hide_run'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>date_group</span><span class='op'>.</span><span class='nam'>daily_quest_dates</span><span class='op'>.</span><span class='nam'>add</span><span class='op'>(</span><span class='nam'>daily_quest_date</span><span class='op'>)</span><span class='strut'>&nbsp;</span></p>
+<p id='t396' class='stm run hide_run'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>self</span><span class='op'>.</span><span class='nam'>assertEqual</span><span class='op'>(</span><span class='nam'>self</span><span class='op'>.</span><span class='nam'>daily_quest</span><span class='op'>.</span><span class='nam'>get_is_allowed_daily_quest</span><span class='op'>(</span><span class='op'>)</span><span class='op'>,</span> <span class='nam'>True</span><span class='op'>)</span><span class='strut'>&nbsp;</span></p>
+<p id='t397' class='pln'><span class='strut'>&nbsp;</span></p>
+<p id='t398' class='stm run hide_run'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='key'>def</span> <span class='nam'>test_get_is_available</span><span class='op'>(</span><span class='nam'>self</span><span class='op'>)</span><span class='op'>:</span><span class='strut'>&nbsp;</span></p>
+<p id='t399' class='stm run hide_run'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='key'>pass</span><span class='strut'>&nbsp;</span></p>
+<p id='t400' class='pln'><span class='strut'>&nbsp;</span></p>
+<p id='t401' class='stm run hide_run'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='key'>def</span> <span class='nam'>test_get_deadline_passed</span><span class='op'>(</span><span class='nam'>self</span><span class='op'>)</span><span class='op'>:</span><span class='strut'>&nbsp;</span></p>
+<p id='t402' class='stm run hide_run'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='key'>pass</span><span class='strut'>&nbsp;</span></p>
                 
             </td>
         </tr>
