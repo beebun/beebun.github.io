@@ -5,7 +5,7 @@
     
     
     <meta http-equiv='X-UA-Compatible' content='IE=emulateIE7' />
-    <title>Coverage for create/models/daily_quest_copies/daily_quest_copy_model: 75%</title>
+    <title>Coverage for create/models/daily_quest_copies/daily_quest_copy_model: 81%</title>
     <link rel='stylesheet' href='style.css' type='text/css'>
     
     <script type='text/javascript' src='jquery.min.js'></script>
@@ -21,16 +21,16 @@
 <div id='header'>
     <div class='content'>
         <h1>Coverage for <b>create/models/daily_quest_copies/daily_quest_copy_model</b> :
-            <span class='pc_cov'>75%</span>
+            <span class='pc_cov'>81%</span>
         </h1>
         <img id='keyboard_icon' src='keybd_closed.png'>
         <h2 class='stats'>
             59 statements &nbsp;
-            <span class='run hide_run shortkey_r button_toggle_run'>46 run</span>
-            <span class='mis shortkey_m button_toggle_mis'>13 missing</span>
+            <span class='run hide_run shortkey_r button_toggle_run'>49 run</span>
+            <span class='mis shortkey_m button_toggle_mis'>10 missing</span>
             <span class='exc shortkey_x button_toggle_exc'>0 excluded</span>
             
-                <span class='par run hide_run shortkey_p button_toggle_par'>2 partial</span>
+                <span class='par run hide_run shortkey_p button_toggle_par'>1 partial</span>
             
         </h2>
     </div>
@@ -130,10 +130,10 @@
 <p id='n65' class='stm run hide_run'><a href='#n65'>65</a></p>
 <p id='n66' class='stm run hide_run'><a href='#n66'>66</a></p>
 <p id='n67' class='stm run hide_run'><a href='#n67'>67</a></p>
-<p id='n68' class='stm par run hide_run'><a href='#n68'>68</a></p>
-<p id='n69' class='stm mis'><a href='#n69'>69</a></p>
-<p id='n70' class='stm mis'><a href='#n70'>70</a></p>
-<p id='n71' class='stm mis'><a href='#n71'>71</a></p>
+<p id='n68' class='stm run hide_run'><a href='#n68'>68</a></p>
+<p id='n69' class='stm run hide_run'><a href='#n69'>69</a></p>
+<p id='n70' class='stm run hide_run'><a href='#n70'>70</a></p>
+<p id='n71' class='stm run hide_run'><a href='#n71'>71</a></p>
 <p id='n72' class='stm run hide_run'><a href='#n72'>72</a></p>
 <p id='n73' class='stm par run hide_run'><a href='#n73'>73</a></p>
 <p id='n74' class='stm mis'><a href='#n74'>74</a></p>
@@ -209,10 +209,10 @@
 <p id='t65' class='stm run hide_run'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>questions</span> <span class='op'>=</span> <span class='nam'>list</span><span class='op'>(</span><span class='nam'>self</span><span class='op'>.</span><span class='nam'>get_questions</span><span class='op'>(</span><span class='op'>)</span><span class='op'>)</span><span class='strut'>&nbsp;</span></p>
 <p id='t66' class='stm run hide_run'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='key'>for</span> <span class='nam'>copy</span> <span class='key'>in</span> <span class='nam'>copies</span><span class='op'>:</span><span class='strut'>&nbsp;</span></p>
 <p id='t67' class='stm run hide_run'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>copy_question</span> <span class='op'>=</span> <span class='nam'>list</span><span class='op'>(</span><span class='nam'>copy</span><span class='op'>.</span><span class='nam'>get_questions</span><span class='op'>(</span><span class='op'>)</span><span class='op'>)</span><span class='strut'>&nbsp;</span></p>
-<p id='t68' class='stm par run hide_run'><span class='annotate' title='no jump to this line number'>69</span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='key'>if</span> <span class='nam'>self</span> <span class='op'>!=</span> <span class='nam'>copy</span> <span class='key'>and</span> <span class='nam'>set</span><span class='op'>(</span><span class='nam'>questions</span><span class='op'>)</span> <span class='op'>==</span> <span class='nam'>set</span><span class='op'>(</span><span class='nam'>copy_question</span><span class='op'>)</span><span class='op'>:</span><span class='strut'>&nbsp;</span></p>
-<p id='t69' class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>self</span><span class='op'>.</span><span class='nam'>hash</span> <span class='op'>=</span> <span class='nam'>copy</span><span class='op'>.</span><span class='nam'>get_hash</span><span class='op'>(</span><span class='op'>)</span><span class='strut'>&nbsp;</span></p>
-<p id='t70' class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>self</span><span class='op'>.</span><span class='nam'>save</span><span class='op'>(</span><span class='op'>)</span><span class='strut'>&nbsp;</span></p>
-<p id='t71' class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='key'>return</span> <span class='nam'>True</span><span class='strut'>&nbsp;</span></p>
+<p id='t68' class='stm run hide_run'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='key'>if</span> <span class='nam'>self</span> <span class='op'>!=</span> <span class='nam'>copy</span> <span class='key'>and</span> <span class='nam'>set</span><span class='op'>(</span><span class='nam'>questions</span><span class='op'>)</span> <span class='op'>==</span> <span class='nam'>set</span><span class='op'>(</span><span class='nam'>copy_question</span><span class='op'>)</span><span class='op'>:</span><span class='strut'>&nbsp;</span></p>
+<p id='t69' class='stm run hide_run'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>self</span><span class='op'>.</span><span class='nam'>hash</span> <span class='op'>=</span> <span class='nam'>copy</span><span class='op'>.</span><span class='nam'>get_hash</span><span class='op'>(</span><span class='op'>)</span><span class='strut'>&nbsp;</span></p>
+<p id='t70' class='stm run hide_run'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>self</span><span class='op'>.</span><span class='nam'>save</span><span class='op'>(</span><span class='op'>)</span><span class='strut'>&nbsp;</span></p>
+<p id='t71' class='stm run hide_run'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='key'>return</span> <span class='nam'>True</span><span class='strut'>&nbsp;</span></p>
 <p id='t72' class='stm run hide_run'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>self</span><span class='op'>.</span><span class='nam'>hash</span> <span class='op'>=</span> <span class='nam'>str</span><span class='op'>(</span><span class='nam'>uuid</span><span class='op'>.</span><span class='nam'>uuid4</span><span class='op'>(</span><span class='op'>)</span><span class='op'>)</span><span class='strut'>&nbsp;</span></p>
 <p id='t73' class='stm par run hide_run'><span class='annotate' title='no jump to this line number'>74</span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='key'>while</span> <span class='nam'>copies</span><span class='op'>.</span><span class='nam'>filter</span><span class='op'>(</span><span class='nam'>hash</span><span class='op'>=</span><span class='nam'>self</span><span class='op'>.</span><span class='nam'>hash</span><span class='op'>)</span><span class='op'>.</span><span class='nam'>exists</span><span class='op'>(</span><span class='op'>)</span><span class='op'>:</span><span class='strut'>&nbsp;</span></p>
 <p id='t74' class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>self</span><span class='op'>.</span><span class='nam'>hash</span> <span class='op'>=</span> <span class='nam'>str</span><span class='op'>(</span><span class='nam'>uuid</span><span class='op'>.</span><span class='nam'>uuid4</span><span class='op'>(</span><span class='op'>)</span><span class='op'>)</span><span class='strut'>&nbsp;</span></p>
