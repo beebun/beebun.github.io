@@ -25,8 +25,8 @@
         </h1>
         <img id='keyboard_icon' src='keybd_closed.png'>
         <h2 class='stats'>
-            92 statements &nbsp;
-            <span class='run hide_run shortkey_r button_toggle_run'>92 run</span>
+            93 statements &nbsp;
+            <span class='run hide_run shortkey_r button_toggle_run'>93 run</span>
             <span class='mis shortkey_m button_toggle_mis'>0 missing</span>
             <span class='exc shortkey_x button_toggle_exc'>0 excluded</span>
             
@@ -178,6 +178,7 @@
 <p id='n113' class='stm run hide_run'><a href='#n113'>113</a></p>
 <p id='n114' class='stm run hide_run'><a href='#n114'>114</a></p>
 <p id='n115' class='stm run hide_run'><a href='#n115'>115</a></p>
+<p id='n116' class='stm run hide_run'><a href='#n116'>116</a></p>
                 
             </td>
             <td class='text' valign='top'>
@@ -294,8 +295,9 @@
 <p id='t111' class='pln'><span class='strut'>&nbsp;</span></p>
 <p id='t112' class='stm run hide_run'>&nbsp; &nbsp; &nbsp; &nbsp; <span class='key'>def</span> <span class='nam'>test_create_revision_history</span><span class='op'>(</span><span class='nam'>self</span><span class='op'>)</span><span class='op'>:</span><span class='strut'>&nbsp;</span></p>
 <p id='t113' class='stm run hide_run'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>mommy</span><span class='op'>.</span><span class='nam'>make</span><span class='op'>(</span><span class='str'>&#39;DailyQuestCopyHistory&#39;</span><span class='op'>,</span> <span class='nam'>daily_quest_copy</span><span class='op'>=</span><span class='nam'>self</span><span class='op'>.</span><span class='nam'>daily_quest_copy</span><span class='op'>)</span><span class='strut'>&nbsp;</span></p>
-<p id='t114' class='stm run hide_run'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>self</span><span class='op'>.</span><span class='nam'>daily_quest_copy</span><span class='op'>.</span><span class='nam'>create_revision_history</span><span class='op'>(</span><span class='nam'>None</span><span class='op'>)</span><span class='strut'>&nbsp;</span></p>
-<p id='t115' class='stm run hide_run'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>self</span><span class='op'>.</span><span class='nam'>assertEqual</span><span class='op'>(</span><span class='nam'>self</span><span class='op'>.</span><span class='nam'>daily_quest_copy</span><span class='op'>.</span><span class='nam'>get_history</span><span class='op'>(</span><span class='op'>)</span><span class='op'>.</span><span class='nam'>count</span><span class='op'>(</span><span class='op'>)</span><span class='op'>,</span> <span class='num'>2</span><span class='op'>)</span><span class='strut'>&nbsp;</span></p>
+<p id='t114' class='stm run hide_run'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>history_count</span> <span class='op'>=</span> <span class='nam'>self</span><span class='op'>.</span><span class='nam'>daily_quest_copy</span><span class='op'>.</span><span class='nam'>get_history</span><span class='op'>(</span><span class='op'>)</span><span class='op'>.</span><span class='nam'>count</span><span class='op'>(</span><span class='op'>)</span><span class='strut'>&nbsp;</span></p>
+<p id='t115' class='stm run hide_run'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>self</span><span class='op'>.</span><span class='nam'>daily_quest_copy</span><span class='op'>.</span><span class='nam'>create_revision_history</span><span class='op'>(</span><span class='nam'>None</span><span class='op'>)</span><span class='strut'>&nbsp;</span></p>
+<p id='t116' class='stm run hide_run'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>self</span><span class='op'>.</span><span class='nam'>assertEqual</span><span class='op'>(</span><span class='nam'>self</span><span class='op'>.</span><span class='nam'>daily_quest_copy</span><span class='op'>.</span><span class='nam'>get_history</span><span class='op'>(</span><span class='op'>)</span><span class='op'>.</span><span class='nam'>count</span><span class='op'>(</span><span class='op'>)</span><span class='op'>,</span> <span class='nam'>history_count</span><span class='op'>+</span><span class='num'>1</span><span class='op'>)</span><span class='strut'>&nbsp;</span></p>
                 
             </td>
         </tr>
