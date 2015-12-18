@@ -5,7 +5,7 @@
     
     
     <meta http-equiv='X-UA-Compatible' content='IE=emulateIE7' />
-    <title>Coverage for create/models/curriculums/curriculum_history_model: 100%</title>
+    <title>Coverage for create/models/curriculums/curriculum_history_model: 96%</title>
     <link rel='stylesheet' href='style.css' type='text/css'>
     
     <script type='text/javascript' src='jquery.min.js'></script>
@@ -21,16 +21,16 @@
 <div id='header'>
     <div class='content'>
         <h1>Coverage for <b>create/models/curriculums/curriculum_history_model</b> :
-            <span class='pc_cov'>100%</span>
+            <span class='pc_cov'>96%</span>
         </h1>
         <img id='keyboard_icon' src='keybd_closed.png'>
         <h2 class='stats'>
-            47 statements &nbsp;
-            <span class='run hide_run shortkey_r button_toggle_run'>47 run</span>
-            <span class='mis shortkey_m button_toggle_mis'>0 missing</span>
+            50 statements &nbsp;
+            <span class='run hide_run shortkey_r button_toggle_run'>49 run</span>
+            <span class='mis shortkey_m button_toggle_mis'>1 missing</span>
             <span class='exc shortkey_x button_toggle_exc'>0 excluded</span>
             
-                <span class='par run hide_run shortkey_p button_toggle_par'>0 partial</span>
+                <span class='par run hide_run shortkey_p button_toggle_par'>1 partial</span>
             
         </h2>
     </div>
@@ -122,8 +122,8 @@
 <p id='n57' class='stm run hide_run'><a href='#n57'>57</a></p>
 <p id='n58' class='stm run hide_run'><a href='#n58'>58</a></p>
 <p id='n59' class='stm run hide_run'><a href='#n59'>59</a></p>
-<p id='n60' class='pln'><a href='#n60'>60</a></p>
-<p id='n61' class='pln'><a href='#n61'>61</a></p>
+<p id='n60' class='stm run hide_run'><a href='#n60'>60</a></p>
+<p id='n61' class='stm run hide_run'><a href='#n61'>61</a></p>
 <p id='n62' class='pln'><a href='#n62'>62</a></p>
 <p id='n63' class='pln'><a href='#n63'>63</a></p>
 <p id='n64' class='pln'><a href='#n64'>64</a></p>
@@ -131,10 +131,13 @@
 <p id='n66' class='pln'><a href='#n66'>66</a></p>
 <p id='n67' class='pln'><a href='#n67'>67</a></p>
 <p id='n68' class='pln'><a href='#n68'>68</a></p>
-<p id='n69' class='stm run hide_run'><a href='#n69'>69</a></p>
-<p id='n70' class='stm run hide_run'><a href='#n70'>70</a></p>
+<p id='n69' class='pln'><a href='#n69'>69</a></p>
+<p id='n70' class='pln'><a href='#n70'>70</a></p>
 <p id='n71' class='stm run hide_run'><a href='#n71'>71</a></p>
 <p id='n72' class='stm run hide_run'><a href='#n72'>72</a></p>
+<p id='n73' class='stm par run hide_run'><a href='#n73'>73</a></p>
+<p id='n74' class='stm mis'><a href='#n74'>74</a></p>
+<p id='n75' class='stm run hide_run'><a href='#n75'>75</a></p>
                 
             </td>
             <td class='text' valign='top'>
@@ -196,20 +199,23 @@
 <p id='t56' class='stm run hide_run'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='key'>if</span> <span class='key'>not</span> <span class='nam'>user</span> <span class='key'>or</span> <span class='nam'>user</span><span class='op'>.</span><span class='nam'>is_anonymous</span><span class='op'>(</span><span class='op'>)</span><span class='op'>:</span><span class='strut'>&nbsp;</span></p>
 <p id='t57' class='stm run hide_run'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>user</span> <span class='op'>=</span> <span class='nam'>curriculum</span><span class='op'>.</span><span class='nam'>get_created_by</span><span class='op'>(</span><span class='op'>)</span><span class='strut'>&nbsp;</span></p>
 <p id='t58' class='stm run hide_run'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>revision</span> <span class='op'>=</span> <span class='nam'>curriculum</span><span class='op'>.</span><span class='nam'>history</span><span class='op'>.</span><span class='nam'>all</span><span class='op'>(</span><span class='op'>)</span><span class='op'>.</span><span class='nam'>count</span><span class='op'>(</span><span class='op'>)</span> <span class='op'>+</span> <span class='num'>1</span><span class='strut'>&nbsp;</span></p>
-<p id='t59' class='stm run hide_run'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>curriculum_history</span> <span class='op'>=</span> <span class='nam'>CurriculumHistory</span><span class='op'>.</span><span class='nam'>objects</span><span class='op'>.</span><span class='nam'>create</span><span class='op'>(</span><span class='strut'>&nbsp;</span></p>
-<p id='t60' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>revision</span><span class='op'>=</span><span class='nam'>revision</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
-<p id='t61' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>is_active</span><span class='op'>=</span><span class='nam'>curriculum</span><span class='op'>.</span><span class='nam'>get_is_active</span><span class='op'>(</span><span class='op'>)</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
-<p id='t62' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>created_by</span><span class='op'>=</span><span class='nam'>user</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
-<p id='t63' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>created_at</span><span class='op'>=</span><span class='nam'>curriculum</span><span class='op'>.</span><span class='nam'>get_updated_at</span><span class='op'>(</span><span class='op'>)</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
-<p id='t64' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>curriculum_series</span><span class='op'>=</span><span class='nam'>curriculum</span><span class='op'>.</span><span class='nam'>get_curriculum_series</span><span class='op'>(</span><span class='op'>)</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
-<p id='t65' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>name</span><span class='op'>=</span><span class='nam'>curriculum</span><span class='op'>.</span><span class='nam'>get_name</span><span class='op'>(</span><span class='op'>)</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
-<p id='t66' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>course</span><span class='op'>=</span><span class='nam'>curriculum</span><span class='op'>.</span><span class='nam'>get_course</span><span class='op'>(</span><span class='op'>)</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
-<p id='t67' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>curriculum</span><span class='op'>=</span><span class='nam'>curriculum</span><span class='strut'>&nbsp;</span></p>
-<p id='t68' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='op'>)</span><span class='strut'>&nbsp;</span></p>
-<p id='t69' class='stm run hide_run'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>tests</span> <span class='op'>=</span> <span class='nam'>curriculum</span><span class='op'>.</span><span class='nam'>get_tests</span><span class='op'>(</span><span class='op'>)</span><span class='strut'>&nbsp;</span></p>
-<p id='t70' class='stm run hide_run'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='key'>for</span> <span class='nam'>test</span> <span class='key'>in</span> <span class='nam'>tests</span><span class='op'>:</span><span class='strut'>&nbsp;</span></p>
-<p id='t71' class='stm run hide_run'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>curriculum_history</span><span class='op'>.</span><span class='nam'>tests</span><span class='op'>.</span><span class='nam'>add</span><span class='op'>(</span><span class='nam'>test</span><span class='op'>)</span><span class='strut'>&nbsp;</span></p>
-<p id='t72' class='stm run hide_run'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='key'>return</span> <span class='nam'>curriculum_history</span><span class='strut'>&nbsp;</span></p>
+<p id='t59' class='stm run hide_run'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>tests</span> <span class='op'>=</span> <span class='nam'>curriculum</span><span class='op'>.</span><span class='nam'>get_tests</span><span class='op'>(</span><span class='op'>)</span><span class='strut'>&nbsp;</span></p>
+<p id='t60' class='stm run hide_run'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>chapters</span> <span class='op'>=</span> <span class='nam'>curriculum</span><span class='op'>.</span><span class='nam'>get_curriculum_chapters</span><span class='op'>(</span><span class='op'>)</span><span class='strut'>&nbsp;</span></p>
+<p id='t61' class='stm run hide_run'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>curriculum_history</span> <span class='op'>=</span> <span class='nam'>CurriculumHistory</span><span class='op'>.</span><span class='nam'>objects</span><span class='op'>.</span><span class='nam'>create</span><span class='op'>(</span><span class='strut'>&nbsp;</span></p>
+<p id='t62' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>revision</span><span class='op'>=</span><span class='nam'>revision</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t63' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>is_active</span><span class='op'>=</span><span class='nam'>curriculum</span><span class='op'>.</span><span class='nam'>get_is_active</span><span class='op'>(</span><span class='op'>)</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t64' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>created_by</span><span class='op'>=</span><span class='nam'>user</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t65' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>created_at</span><span class='op'>=</span><span class='nam'>curriculum</span><span class='op'>.</span><span class='nam'>get_updated_at</span><span class='op'>(</span><span class='op'>)</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t66' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>curriculum_series</span><span class='op'>=</span><span class='nam'>curriculum</span><span class='op'>.</span><span class='nam'>get_curriculum_series</span><span class='op'>(</span><span class='op'>)</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t67' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>name</span><span class='op'>=</span><span class='nam'>curriculum</span><span class='op'>.</span><span class='nam'>get_name</span><span class='op'>(</span><span class='op'>)</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t68' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>course</span><span class='op'>=</span><span class='nam'>curriculum</span><span class='op'>.</span><span class='nam'>get_course</span><span class='op'>(</span><span class='op'>)</span><span class='op'>,</span><span class='strut'>&nbsp;</span></p>
+<p id='t69' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>curriculum</span><span class='op'>=</span><span class='nam'>curriculum</span><span class='strut'>&nbsp;</span></p>
+<p id='t70' class='pln'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='op'>)</span><span class='strut'>&nbsp;</span></p>
+<p id='t71' class='stm run hide_run'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='key'>for</span> <span class='nam'>test</span> <span class='key'>in</span> <span class='nam'>tests</span><span class='op'>:</span><span class='strut'>&nbsp;</span></p>
+<p id='t72' class='stm run hide_run'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>curriculum_history</span><span class='op'>.</span><span class='nam'>tests</span><span class='op'>.</span><span class='nam'>add</span><span class='op'>(</span><span class='nam'>test</span><span class='op'>)</span><span class='strut'>&nbsp;</span></p>
+<p id='t73' class='stm par run hide_run'><span class='annotate' title='no jump to this line number'>74</span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='key'>for</span> <span class='nam'>chapter</span> <span class='key'>in</span> <span class='nam'>chapters</span><span class='op'>:</span><span class='strut'>&nbsp;</span></p>
+<p id='t74' class='stm mis'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='nam'>chapter</span><span class='op'>.</span><span class='nam'>create_revision_history</span><span class='op'>(</span><span class='nam'>curriculum_history</span><span class='op'>)</span><span class='strut'>&nbsp;</span></p>
+<p id='t75' class='stm run hide_run'>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class='key'>return</span> <span class='nam'>curriculum_history</span><span class='strut'>&nbsp;</span></p>
                 
             </td>
         </tr>
