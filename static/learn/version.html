@@ -95,13 +95,26 @@
         </div>
         <div class="col-md-6">
           <ul class="list-group media-list media-list-stream">
+
+            <!-- [SyncTemplate] Show when Changelog is empty -->
+            <li class="media list-group-item">
+              <div class="media-body">
+                <div class="media-body-text text-center">
+                  <span class="mute"><any i18n="version.empty_changelog_message">No Changelog Data</any></span>
+                </div>
+              </div>
+            </li>
+            <!-- [SyncTemplate] Show when Changelog is empty -->
+
             <li class="media list-group-item">
               <div class="media-body">
                 <div class="media-body-text">
-                  <strong>What's New</strong> <small>10 ม.ค. 2559</small>
+                  <!-- [SyncTemplate] Use language file for text -->
+                  <strong><any i18n="version.whats_new">What's New</any></strong> <small>10 ม.ค. 2559</small>
                   <br>- เพิ่มฟังก์ชัน Add to Home Screen ทำให้เพิ่ม app icon ลงบนโทรศัพท์ได้ผ่านบราวเซอร์ Chrome บน Android และ Safari บน iOS
                   <hr>
-                  <strong>Version 1.0.24</strong> <small>3 ม.ค. 2559</small>
+                  <!-- [SyncTemplate] Use language file for text -->
+                  <strong><any i18n="version.version">Version</any></strong> <small>10 ม.ค. 2559</small>
                   <br>- เพิ่มหน้า Version สำหรับดูรายละเอียดการอัพเดท app
                   <br>- เพิ่มหน้า Help สำหรับ คำถามที่พบบ่อย (FAQ) และ วิธีติดต่อ flipped Team
                 </div>
@@ -186,6 +199,15 @@
   border-color: #ebccd1;
   color: #a94442;
 }
+
+
+/* [SyncTemplate] New CSS for empty message */
+.mute{
+  color:#999;
+}
+/* New CSS for empty message */
+
+
 </style>
 
 <script>
