@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- These meta tags come first. -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=0, width=device-width">
+
+    <title>flipped.html</title>
+
+    <!-- Favicon in Browser Tab -->
+    <link rel="icon" sizes="192x192" href="https://dl.dropboxusercontent.com/u/50922049/flipped/App%20Icon/favicon-192.png">
+    <link rel="apple-touch-icon" href="https://dl.dropboxusercontent.com/u/50922049/flipped/App%20Icon/favicon-192.png">
+
+    <!-- Include the CSS -->
+    <link href="../dist/toolkit.min.css" rel="stylesheet">
+
+    <!-- Include the JS -->
+    <script href="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script href="../dist/toolkit.min.js"></script>
+  </head>
+  <body>
+    <div class="container-fluid container-fill-height p-a-0">
+      <div class="container-content-middle" id="landing">
+        <form role="form" id="login-form" class="m-x-auto text-center app-login-form">
+
+          <div id="app-logo-landing">
+            <img src="https://dl.dropboxusercontent.com/u/50922049/flipped/login-app_logo.png">
+          </div>
+
+          <div class="form-group">
+            <input class="form-control" placeholder="Username">
+          </div>
+
+          <div class="form-group m-b-md">
+            <input type="password" class="form-control" placeholder="Password">
+          </div>
+
+          <div class="m-b-lg w-full">
+            <button id="button-landing" class="btn w-full">GO!</button>
+          </div>
+
+        </form>
+
+      </div>
+    </div>
+    <!-- Include jQuery (required) and the JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="../dist/toolkit.min.js"></script>
+  </body>
+</html>
+
+<style type="text/css">
+.app-login-form {
+  max-width: 280px;
+}
+
+#app-logo-landing, #app-logo-landing>img {
+  position: fixed;
+  left: 50%;
+  top: 30%;
+
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+
+  width: 150px;
+  height: 150px;
+}
+
+#app-logo-landing>img {
+  width: 150px;
+  height: 150px;
+  margin: 0 auto;
+  background: no-repeat;
+}
+
+#login-form {
+  position: fixed;
+  top: 50%;
+  left: 0;
+  right: 0;
+}
+
+#landing {
+  width: 100%;
+  height: 100%;
+
+  background: url('https://dl.dropboxusercontent.com/u/50922049/flipped/bg_login.jpg') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+#button-landing {
+  font-size: 1.5em;
+  line-height: 1em;
+  background: #f4a132; /* Old browsers */
+  background: -moz-linear-gradient(left,  #f4a132 0%, #ff6547 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, right top, color-stop(0%,#f4a132), color-stop(100%,#ff6547)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(left,  #f4a132 0%,#ff6547 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(left,  #f4a132 0%,#ff6547 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(left,  #f4a132 0%,#ff6547 100%); /* IE10+ */
+  background: linear-gradient(to right,  #f4a132 0%,#ff6547 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f4a132', endColorstr='#ff6547',GradientType=1 ); /* IE6-9 */
+
+  font-weight: 400;
+  color: white;
+  font-family: 'Sanchez', serif;
+
+  border: 0;
+}
+</style>

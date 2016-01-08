@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- These meta tags come first. -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=0, width=device-width">
+
+    <title>flipped.html</title>
+
+    <!-- Favicon in Browser Tab -->
+    <link rel="icon" sizes="192x192" href="https://dl.dropboxusercontent.com/u/50922049/flipped/App%20Icon/favicon-192.png">
+    <link rel="apple-touch-icon" href="https://dl.dropboxusercontent.com/u/50922049/flipped/App%20Icon/favicon-192.png">
+
+    <!-- Include the CSS -->
+    <link href="../dist/toolkit.min.css" rel="stylesheet">
+
+    <!-- Include the JS -->
+    <script href="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script href="../dist/toolkit.min.js"></script>
+  </head>
+
+  <body class="with-top-navbar">
+    <nav class="navbar navbar-inverse navbar-fixed-top app-navbar">
+      <div class="container">
+        <div class="navbar-header">
+          <a href="home.html"><img id="logo" src="https://dl.dropboxusercontent.com/u/50922049/flipped/App%20Icon/flipped%20logo%20transparent%20background.png"></a>
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-main" aria-expanded="true">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+        <div class="navbar-collapse collapse" id="navbar-collapse-main" aria-expanded="true">
+          <ul class="nav navbar-nav hidden-xs">
+            <li class="active"><a href="home.html">Home</a></li>
+            <li class="active"><a href="home.html">Calendar</a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right m-r-0 hidden-xs">
+            <li>
+              <button class="btn btn-default navbar-btn navbar-btn-avitar" data-toggle="popover" data-placement="bottom" data-html="true" data-original-title="" title="" data-content="<div class='nav nav-stacked' style='width: 200px'>
+          <li><a href='#'' data-action='growl'>Change Password</a></li>
+          <li><a href='../login/index.html'>Logout</a></li>
+        </div>">
+                <img class="img-circle" src="https://dl.dropboxusercontent.com/u/50922049/Photos%20of%20Me/Professional%20Tong.jpg">
+              </button>
+            </li>
+          </ul>
+          <ul class="nav navbar-nav visible-xs">
+            <li><a href="">Home</a></li>
+            <li><a href="">Calendar</a></li>
+            <li><a href="">Change Password</a></li>
+            <li><a href="">Logout</a></li>
+          </ul>
+        </div>
+        <div class="navbar-collapse collapse">
+          
+        </div>
+      </div>
+    </nav>
+    <div class="container p-t-md">
+      <div class="row">
+        <div class="col-md-3">
+          <div class="panel panel-default panel-profile m-b-md">
+            <div class="panel-body text-center">
+              <a href="">
+                <img class="panel-profile-img" src="https://dl.dropboxusercontent.com/u/50922049/Photos%20of%20Me/Professional%20Tong.jpg">
+              </a>
+              <h5 class="panel-title">Tong W. Ratanapan</h5>
+              <ul class="panel-menu">
+                <li class="panel-menu-item">
+                  <a href="#userModal" class="text-inherit" data-toggle="modal">Points</a>
+                  <h5 class="m-y-0">12.1k</h5>
+                </li>
+                <li class="panel-menu-item">
+                  <a href="#userModal" class="text-inherit" data-toggle="modal">Streak</a>
+                  <h5 class="m-y-0">7</h5>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="panel panel-default">
+            <div class="panel-body">
+              <h5 class="m-t-0">Course</h5>
+              <ul class="list-unstyled list-spaced">
+                <li>
+                  <span class="icon icon-blackboard m-r"></span>คณิตศาสตร์พื้นฐาน
+                  <div class="text-center">
+                    <a href="">4/1</a>·<a href="">4/2</a>·<a href="">4/3</a>·<a href="">4/4</a>·<a href="">4/5</a>·<a href="">4/6</a>·<a href="">4/7</a>·<a href="">4/8</a>
+                  </div>
+                </li>
+                <li>
+                  <span class="icon icon-blackboard m-r"></span>คณิตศาสตร์เพิ่มเติม
+                  <div class="text-center">
+                    <a href="">4/6</a>·<a href="">4/7</a>·<a href="">4/8</a>·<a href="">4/9</a>·<a href="">4/10</a>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-9">
+          <div class="panel panel-default">
+            <div class="panel-body">
+              <div class="row">
+                <div class="col-sm-4">
+                  <h3 class="text-center">19-25 Oct</h3>
+                  <div class="list-group media-list calendar-week">
+                    <a href="#" class="list-group-item calendar-day">
+                      <div class="media">
+                        <div class="media-body"><strong>Oct 19</strong> · <span class="icon icon-pencil"></span> สมการกำลังสอง</div>
+                      </div>
+                    </a>
+                    <a href="#" class="list-group-item calendar-day">
+                      <div class="media">
+                        <div class="media-body"><strong>Oct 20</strong> · <span class="icon icon-light-bulb"></span> สมการกำลังสอง</div>
+                      </div>
+                    </a>
+                    <a href="#" class="list-group-item calendar-day">
+                      <div class="media">
+                        <div class="media-body"><strong>Oct 21</strong> · <span class="icon icon-light-bulb"></span> สมการกำลังสอง</div>
+                      </div>
+                    </a>
+                    <a href="#" class="list-group-item calendar-day">
+                      <div class="media">
+                        <div class="media-body"><strong>Oct 22</strong> · <span class="icon icon-pencil"></span> สมการกำลังสอง</div>
+                      </div>
+                    </a>
+                    <a href="#" class="list-group-item calendar-day">
+                      <div class="media">
+                        <div class="media-body"><strong>Oct 23</strong> · <span class="icon icon-light-bulb"></span> สมการกำลังสอง</div>
+                      </div>
+                    </a>
+                    <a href="#" class="list-group-item calendar-day">
+                      <div class="media">
+                        <div class="media-body"><strong>Oct 24</strong> · <span class="icon icon-pencil"></span> สมการกำลังสอง</div>
+                      </div>
+                    </a>
+                    <a href="#" class="list-group-item calendar-day">
+                      <div class="media">
+                        <div class="media-body"><strong>Oct 25</strong> · <span class="icon icon-light-bulb"></span> สมการกำลังสอง</div>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+                <div class="col-sm-4">
+                  <h3 class="text-center">This Week</h3>
+                  <div class="list-group media-list calendar-week">
+                    <a href="#" class="list-group-item calendar-day calendar-today">
+                      <div class="media">
+                        <div class="media-body"><strong>Oct 26</strong> · <span class="icon icon-pencil"></span> สมการกำลังสอง</div>
+                      </div>
+                    </a>
+                    <a href="#" class="list-group-item calendar-day">
+                      <div class="media">
+                        <div class="media-body"><strong>Oct 27</strong> · <span class="icon icon-light-bulb"></span> สมการกำลังสอง</div>
+                      </div>
+                    </a>
+                    <a href="#" class="list-group-item calendar-day">
+                      <div class="media">
+                        <div class="media-body"><strong>Oct 28</strong> · <span class="icon icon-pencil"></span> สมการกำลังสอง</div>
+                      </div>
+                    </a>
+                    <a href="#" class="list-group-item calendar-day">
+                      <div class="media">
+                        <div class="media-body"><strong>Oct 29</strong> · <span class="icon icon-pencil"></span> สมการกำลังสอง</div>
+                      </div>
+                    </a>
+                    <a href="#" class="list-group-item calendar-day">
+                      <div class="media">
+                        <div class="media-body"><strong>Oct 30</strong> · <span class="icon icon-light-bulb"></span> สมการกำลังสอง</div>
+                      </div>
+                    </a>
+                    <a href="#" class="list-group-item calendar-day">
+                      <div class="media">
+                        <div class="media-body"><strong>Oct 31</strong> · <span class="icon icon-pencil"></span> สมการกำลังสอง</div>
+                      </div>
+                    </a>
+                    <a href="#" class="list-group-item calendar-day">
+                      <div class="media">
+                        <div class="media-body"><strong>Nov 01</strong> · <span class="icon icon-pencil"></span> สมการกำลังสอง</div>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+                <div class="col-sm-4">
+                  <h3 class="text-center">02-08 Nov</h3>
+                  <div class="list-group media-list calendar-week">
+                    <a href="#" class="list-group-item calendar-day">
+                      <div class="media">
+                        <div class="media-body"><strong>Nov 02</strong> · <span class="icon icon-pencil"> สมการกำลังสอง</div>
+                      </div>
+                    </a>
+                    <a href="#" class="list-group-item calendar-day">
+                      <div class="media">
+                        <div class="media-body"><strong>Nov 03</strong> · <span class="icon icon-light-bulb"></span> สมการกำลังสอง</div>
+                      </div>
+                    </a>
+                    <a href="#" class="list-group-item calendar-day">
+                      <div class="media">
+                        <div class="media-body"><strong>Nov 04</strong> · <span class="icon icon-light-bulb"></span> สมการกำลังสอง</div>
+                      </div>
+                    </a>
+                    <a href="#" class="list-group-item calendar-day">
+                      <div class="media">
+                        <div class="media-body"><strong>Nov 05</strong> · <span class="icon icon-pencil"> สมการกำลังสอง</div>
+                      </div>
+                    </a>
+                    <a href="#" class="list-group-item calendar-day">
+                      <div class="media">
+                        <div class="media-body"><strong>Nov 06</strong> · <span class="icon icon-pencil"> สมการกำลังสอง</div>
+                      </div>
+                    </a>
+                    <a href="#" class="list-group-item calendar-day">
+                      <div class="media">
+                        <div class="media-body"><strong>Nov 07</strong> · <span class="icon icon-pencil"> สมการกำลังสอง</div>
+                      </div>
+                    </a>
+                    <a href="#" class="list-group-item calendar-day">
+                      <div class="media">
+                        <div class="media-body"><strong>Nov 08</strong> · <span class="icon icon-pencil"> สมการกำลังสอง</div>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <hr>
+              <div class="row">
+                <div class="col-sm-4 text-center">
+                  <h4>New Topics</h4>
+                  <div><a href=""><span class="icon icon-pencil"></span> สมการกำลังสอง</a></div>
+                  <div><a href=""><span class="icon icon-light-bulb"></span> สมการกำลังสอง</a></div>
+                  <button class="btn btn-sm btn-pill btn-default w-full"><span class="icon icon-magnifying-glass"></span> Search Topic</button>
+                  <button class="btn btn-sm btn-pill btn-primary w-full"><span class="icon icon-magnifying-glass"></span> Search Topic</button>
+                </div>
+                <div class="col-sm-4 text-center">
+                  <h4>Active Topics</h4>
+                  <div><a href=""><span class="icon icon-pencil"></span> สมการกำลังสอง</a></div>
+                </div>
+                <div class="col-sm-4 text-center">
+                  <h4>Completed Topics</h4>
+                  <div><a href=""><span class="icon icon-light-bulb"></span> สมการกำลังสอง</a></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Include jQuery (required) and the JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="../dist/toolkit.min.js"></script>
+  </body>
+</html>
+
+<style type="text/css">
+.panel-profile-img { /* Overwrite toolkit.css */
+  margin-top: 0;
+}
+
+.navbar-inverse { /* Overwrite toolkit.css */
+  background-color: #FA833D;
+  border-color: #FF6547;
+}
+
+#navbar-collapse-main {
+  border-color: #FF6547;
+}
+
+.navbar-inverse .navbar-toggle {
+  background-color: #FA833D;
+  border-color: white;
+}
+
+.navbar-inverse .navbar-toggle:focus {
+  background-color: #FA833D;
+}
+
+.navbar-inverse .navbar-toggle:hover {
+  background-color: #FA833D;
+}
+
+#logo {
+  height: 40px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.updated {
+  color: red;
+}
+
+.modal-full-button {
+  width: 100%;
+}
+
+.calendar-day {
+  border-right: 0;
+  border-left: 0;
+}
+
+.calendar-today {
+  background-color: yellow;
+}
+
+.calendar-week a:first-child {
+  border-top: 0;
+}
+
+.calendar-week a:last-child {
+  border-bottom: 0;
+}
+</style>
+
+<script>
+$(document).ready(function(){
+  $('[data-toggle="popover"]').popover()
+})
+</script>

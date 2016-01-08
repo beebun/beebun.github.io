@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- These meta tags come first. -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=0, width=device-width">
+
+    <title>flipped.html</title>
+
+    <!-- Favicon in Browser Tab -->
+    <link rel="icon" sizes="192x192" href="https://dl.dropboxusercontent.com/u/50922049/flipped/App%20Icon/favicon-192.png">
+    <link rel="apple-touch-icon" href="https://dl.dropboxusercontent.com/u/50922049/flipped/App%20Icon/favicon-192.png">
+
+    <!-- Include the CSS -->
+    <link href="../dist/toolkit.min.css" rel="stylesheet">
+
+    <!-- Include the JS -->
+    <script href="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script href="../dist/toolkit.min.js"></script>
+  </head>
+
+  <body>
+    <div class="container p-t-md">
+      <h1 class="text-center">List of Modals in LEARN by Page</h1>
+      <h2>Home</h2>
+      <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModalStudent">
+        Check Profile (Student)
+      </button>
+      <div id="myModalStudent" class="modal">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h4 class="modal-title text-center">Your Profile</h4>
+            </div>
+            <div class="modal-body">
+              <div class="alert alert-warning alert-dismissible" role="alert">
+                <span class="icon icon-warning"></span> <span class="alert-link">Is Your Profile Correct?</span> 'Edit' or 'Report Problem' if anything is incorrect.
+              </div>
+              <div class="row">
+                <div class="col-xs-12">
+                  <div class="panel-body text-center">
+                    <a href="">
+                      <img class="panel-profile-img" src="https://dl.dropboxusercontent.com/u/50922049/Photos%20of%20Me/Professional%20Tong.jpg">
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-xs-4 col-md-6 text-right">
+                  <strong>Name (EN)</strong>
+                </div>
+                <div class="col-xs-8 col-md-6">
+                  Tong W. Ratanapan
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-xs-4 col-md-6 text-right">
+                  <strong>Name (TH)</strong>
+                </div>
+                <div class="col-xs-8 col-md-6">
+                  วรพล รัตนพันธ์
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-xs-4 col-md-6 text-right">
+                  <strong>Student ID</strong>
+                </div>
+                <div class="col-xs-8 col-md-6">
+                  MC26155
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-xs-4 col-md-6 text-right">
+                  <strong>Gender</strong>
+                </div>
+                <div class="col-xs-8 col-md-6">
+                  Male
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-xs-4 col-md-6 text-right">
+                  <strong>Class</strong>
+                </div>
+                <div class="col-xs-8 col-md-6">
+                  M.5/A
+                </div>
+              </div>
+              <br>
+              <div class="row">
+                <div class="col-xs-12 text-center"><a href="">Report Problem</a></div>
+              </div>
+            </div>
+            <div class="modal-actions">
+              <button type="button" id="submit-profile-btn" class="btn-link modal-action modal-full-button" data-dismiss="modal">
+                <strong>Looks great!</strong>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <br>
+      <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#changePasswordStudent">
+        Change Password (Student)
+      </button>
+      <div id="changePasswordStudent" class="modal">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h4 class="modal-title text-center">Change Password</h4>
+            </div>
+            <div class="modal-body">
+              <div class="row">
+                <div class="col-xs-4 col-md-6 text-right">
+                  <strong>New<span class="hidden-xs"> Password</span></strong>
+                </div>
+                <div class="col-xs-8 col-md-6"> 
+                  <input type="password" id="new_password" class="form-control" required>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-xs-4 col-md-6 text-right">
+                  <strong>Confirm<span class="hidden-xs"> Password</span></strong>
+                </div>
+                <div class="col-xs-8 col-md-6">
+                  <input type="password" id="confirm_password" class="form-control" required>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-xs-12 col-md-12">&nbsp;
+                  <div class="alert alert-danger alert-dismissible" role="alert" ><span class="icon icon-warning"></span> Password Must Be Between 6-20 Characters.
+                  </div>
+                  <div class="alert alert-danger alert-dismissible" role="alert"><span class="icon icon-warning"></span> Comfirm Password Does Not Match.</div>
+                  <div class="alert alert-success alert-dismissible" role="alert"><span class="icon icon-check"></span> Password Changed Successfully.</div>
+                </div>
+              </div>
+            </div>
+            <div class="modal-actions">
+                <button type="submit" class="btn-link modal-action modal-full-button">SAVE</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+
+
+    </div>
+
+    <!-- Include jQuery (required) and the JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="../dist/toolkit.min.js"></script>
+  </body>
+</html>
+
+<style type="text/css">
+.panel-profile-img { /* Overwrite toolkit.css */
+  margin-top: 0;
+}
+
+.navbar-inverse { /* Overwrite toolkit.css */
+  background-color: rgb(41, 72, 96)
+}
+
+#logo {
+  height: 40px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.updated {
+  color: red;
+}
+
+.modal-full-button {
+  width: 100%;
+}
+
+.submitted-on-time {
+  background-color: #dff0d8;
+  border-color: #d6e9c6;
+  color: #3c763d;
+}
+
+.submitted-late {
+  background-color: #fcf8e3;
+  border-color: #e6d0a1;
+  color: #8a6d3b;
+}
+
+.deadline-passed {
+  background-color: #f2dede;
+  border-color: #ebccd1;
+  color: #a94442;
+}
+</style>
+
+<script>
+$(document).ready(function(){
+  $('[data-toggle="popover"]').popover()
+})
+</script>

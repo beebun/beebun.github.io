@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- These meta tags come first. -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=0, width=device-width">
+
+    <title>flipped.html</title>
+
+    <!-- Favicon in Browser Tab -->
+    <link rel="icon" sizes="192x192" href="https://dl.dropboxusercontent.com/u/50922049/flipped/App%20Icon/favicon-192.png">
+    <link rel="apple-touch-icon" href="https://dl.dropboxusercontent.com/u/50922049/flipped/App%20Icon/favicon-192.png">
+
+    <!-- Include the CSS -->
+    <link href="../dist/toolkit.min.css" rel="stylesheet">
+
+    <!-- Include the JS -->
+    <script href="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script href="../dist/toolkit.min.js"></script>
+  </head>
+
+  <body class="with-top-navbar">
+    <nav class="navbar navbar-inverse navbar-fixed-top app-navbar">
+      <div class="container">
+        <div class="navbar-header">
+          <a href="home.html"><img id="logo" src="https://dl.dropboxusercontent.com/u/50922049/flipped/App%20Icon/flipped%20logo%20transparent%20background.png"></a>
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-main" aria-expanded="true">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+        <div class="navbar-collapse collapse" id="navbar-collapse-main" aria-expanded="true">
+          <ul class="nav navbar-nav hidden-xs">
+            <li class="active"><a href="home.html">Home</a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right m-r-0 hidden-xs">
+            <li>
+              <button class="btn btn-default navbar-btn navbar-btn-avitar" data-toggle="popover" data-placement="bottom" data-html="true" data-original-title="" title="" data-content="<div class='nav nav-stacked' style='width: 200px'>
+          <li><a href='#'' data-action='growl'>Change Password</a></li>
+          <li><a href='../login/index.html'>Logout</a></li>
+        </div>">
+                <img class="img-circle" src="https://dl.dropboxusercontent.com/u/50922049/Photos%20of%20Me/Professional%20Tong.jpg">
+              </button>
+            </li>
+          </ul>
+          <ul class="nav navbar-nav visible-xs">
+            <li><a href="">Home</a></li>
+            <li><a href="">Change Password</a></li>
+            <li><a href="">Logout</a></li>
+          </ul>
+        </div>
+        <div class="navbar-collapse collapse">
+          
+        </div>
+      </div>
+    </nav>
+    <div class="container p-t-md">
+      <div class="row">
+        <div class="col-md-3 hidden-sm hidden-xs">
+          <div class="panel panel-default panel-profile m-b-md">
+            <div class="panel-body text-center">
+              <a href="">
+                <img class="panel-profile-img" src="https://dl.dropboxusercontent.com/u/50922049/Photos%20of%20Me/Professional%20Tong.jpg">
+              </a>
+              <h5 class="panel-title">Tong W. Ratanapan</h5>
+              <p></p>
+              <ul class="panel-menu">
+                <li class="panel-menu-item">
+              <a href="#userModal" class="text-inherit" data-toggle="modal">
+                Points
+                <h5 class="m-y-0">12.1k</h5>
+                <li class="panel-menu-item">
+              <a href="#userModal" class="text-inherit" data-toggle="modal">
+                Streak
+                <h5 class="m-y-0">7</h5>
+              </a>
+            </li>
+              </a>
+            </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-9 col-sm-12 col-xs-12">
+          <div class="panel panel-default">
+            <div class="panel-body" style="min-height:500px">
+
+              <h2 class="point-summary-header">Point Summary</h2>
+              <table class="point-summary-body table">
+                  <tbody>
+                  <tr>
+                      <td>Correct Answer</td>
+                      <td class="point-obtained">
+                        <span>2 x 10 = 20 Points</span>
+                      </td>
+                  </tr>
+                  <tr>
+                      <td>Complete Quest</td>
+                      <td class="point-obtained">10 Points</td>
+                  </tr>
+                  <tr>
+                      <td></td>
+                      <td class="point-obtained">Total: 30 Points</td>
+                  </tr>
+                  </tbody>
+              </table>
+
+              <!-- Leaderboard -->
+              <div class="text-center">
+                  <h2 id="weekly-leaderboard-title">Leaderboard ห้อง 4/1</h2>
+                  <span id="course-title">คณิตศาสตร์พื้นฐาน</span><br/>
+                  <span><small>26 Oct 2015</small> to <small>01 Nov 2015</small></span><br/><br/>
+              </div>
+              <table id="weekly-leaderboard" class="table">
+                  <tbody>
+                  <tr class="in-top-ten">
+                    <th class="rank">1</th>
+                      <td class="user-pic">
+                          <div class="user-avatar">
+                              <div class="circular pro-pic-s shadow" style="background-image:url(http://learn-dev.flipped.io/assets/images/placeholder/person.png)">&nbsp;</div>
+                          </div>
+                      </td>
+                      <td>StudentName<span class="long-version"> InTop10</span></td>
+                      <td class="point-obtained">110</td>
+                  </tr>
+                  <tr>
+                    <th class="rank">2</th>
+                      <td class="user-pic">
+                          <div class="user-avatar">
+                              <div class="circular pro-pic-s shadow" style="background-image:url(http://learn-dev.flipped.io/assets/images/placeholder/person.png)">&nbsp;</div>
+                          </div>
+                      </td>
+                      <td>StudentName<span class="long-version"> StudentLastname</span></td>
+                      <td class="point-obtained">100</td>
+                  </tr>
+                  <tr>
+                    <th class="rank">3</th>
+                      <td class="user-pic">
+                          <div class="user-avatar">
+                              <div class="circular pro-pic-s shadow" style="background-image:url(http://learn-dev.flipped.io/assets/images/placeholder/person.png)">&nbsp;</div>
+                          </div>
+                      </td>
+                      <td>StudentName<span class="long-version"> StudentLastname</span></td>
+                      <td class="point-obtained">90</td>
+                  </tr>
+                  <tr>
+                    <th class="rank">4</th>
+                      <td class="user-pic">
+                          <div class="user-avatar">
+                              <div class="circular pro-pic-s shadow" style="background-image:url(http://learn-dev.flipped.io/assets/images/placeholder/person.png)">&nbsp;</div>
+                          </div>
+                      </td>
+                      <td>StudentName<span class="long-version"> StudentLastname</span></td>
+                      <td class="point-obtained">80</td>
+                  </tr>
+                  <tr>
+                    <th class="rank">5</th>
+                      <td class="user-pic">
+                          <div class="user-avatar">
+                              <div class="circular pro-pic-s shadow" style="background-image:url(http://learn-dev.flipped.io/assets/images/placeholder/person.png)">&nbsp;</div>
+                          </div>
+                      </td>
+                      <td>StudentName<span class="long-version"> StudentLastname</span></td>
+                      <td class="point-obtained">70</td>
+                  </tr>
+                  <tr>
+                    <th class="rank">6</th>
+                      <td class="user-pic">
+                          <div class="user-avatar">
+                              <div class="circular pro-pic-s shadow" style="background-image:url(http://learn-dev.flipped.io/assets/images/placeholder/person.png)">&nbsp;</div>
+                          </div>
+                      </td>
+                      <td>StudentName<span class="long-version"> StudentLastname</span></td>
+                      <td class="point-obtained">60</td>
+                  </tr>
+                  <tr>
+                    <th class="rank">7</th>
+                      <td class="user-pic">
+                          <div class="user-avatar">
+                              <div class="circular pro-pic-s shadow" style="background-image:url(http://learn-dev.flipped.io/assets/images/placeholder/person.png)">&nbsp;</div>
+                          </div>
+                      </td>
+                      <td>StudentName<span class="long-version"> StudentLastname</span></td>
+                      <td class="point-obtained">50</td>
+                  </tr>
+                  <tr>
+                    <th class="rank">8</th>
+                      <td class="user-pic">
+                          <div class="user-avatar">
+                              <div class="circular pro-pic-s shadow" style="background-image:url(http://learn-dev.flipped.io/assets/images/placeholder/person.png)">&nbsp;</div>
+                          </div>
+                      </td>
+                      <td>StudentName<span class="long-version"> StudentLastname</span></td>
+                      <td class="point-obtained">40</td>
+                  </tr>
+                  <tr>
+                    <th class="rank">9</th>
+                      <td class="user-pic">
+                          <div class="user-avatar">
+                              <div class="circular pro-pic-s shadow" style="background-image:url(http://learn-dev.flipped.io/assets/images/placeholder/person.png)">&nbsp;</div>
+                          </div>
+                      </td>
+                      <td>StudentName<span class="long-version"> StudentLastname</span></td>
+                      <td class="point-obtained">30</td>
+                  </tr>
+                  <tr>
+                    <th class="rank">10</th>
+                      <td class="user-pic">
+                          <div class="user-avatar">
+                              <div class="circular pro-pic-s shadow" style="background-image:url(http://learn-dev.flipped.io/assets/images/placeholder/person.png)">&nbsp;</div>
+                          </div>
+                      </td>
+                      <td>StudentName<span class="long-version"> StudentLastname</span></td>
+                      <td class="point-obtained">20</td>
+                  </tr>
+                  <tr class="not-in-top-ten">
+                    <th class="rank">11</th>
+                      <td class="user-pic">
+                          <div class="user-avatar">
+                              <div class="circular pro-pic-s shadow" style="background-image:url(http://learn-dev.flipped.io/assets/images/placeholder/person.png)">&nbsp;</div>
+                          </div>
+                      </td>
+                      <td>StudentName<span class="long-version"> NotInTop10</span></td>
+                      <td class="point-obtained">10</td>
+                  </tr>
+                  </tbody>
+              </table>
+              <br/>
+              <!-- Leaderboard -->
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Include jQuery (required) and the JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="../dist/toolkit.min.js"></script>
+  </body>
+</html>
+
+<style type="text/css">
+.panel-profile-img { /* Overwrite toolkit.css */
+  margin-top: 0;
+}
+
+.navbar-inverse { /* Overwrite toolkit.css */
+  background-color: rgb(41, 72, 96)
+}
+
+#logo {
+  height: 40px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.updated {
+  color: red;
+}
+
+.modal-full-button {
+  width: 100%;
+}
+
+.submitted-on-time {
+  background-color: #dff0d8;
+  border-color: #d6e9c6;
+  color: #3c763d;
+}
+
+.submitted-late {
+  background-color: #fcf8e3;
+  border-color: #e6d0a1;
+  color: #8a6d3b;
+}
+
+.deadline-passed {
+  background-color: #f2dede;
+  border-color: #ebccd1;
+  color: #a94442;
+}
+
+
+
+/* Profiel Picture */
+.pro-pic-s {
+  width: 35px;
+  height: 35px;
+  background-position: center;
+  background-size: cover;
+}
+
+.circular {
+  border-radius: 50%;
+}
+
+.center{
+  margin: 0px auto;
+}
+
+.shadow {
+  box-shadow: 0 0 5px 0;
+}
+/* Profile Picture */
+
+
+
+/* Leaderboard */
+.rank {
+  text-align: center;
+  width: 20px;
+}
+.user-pic {
+  width: 50px;
+}
+.weekly-leaderboard-header {
+  text-align: center;
+  margin-bottom: 1.5em;
+}
+
+#weekly-leaderboard-title {
+  font-size: 1.25em;
+}
+
+#weekly-leaderboard {
+  margin-bottom: 0;
+}
+
+#weekly-leaderboard>tbody>tr>th, #weekly-leaderboard>tbody>tr>td {
+  vertical-align: middle;
+  padding: 2px 5px;
+}
+
+@media (max-width: 400px) {
+  .long-version {
+      display: none;
+  }
+}
+
+.in-top-ten{ /* highlight when student is in top 10 */
+  background-color: #5cb85c !important;
+}
+
+.not-in-top-ten{ /* highlight when student is not in top 10*/
+  background-color: #d9534f !important;
+}
+/* Leaderboard */
+
+
+
+/* Score Summary */
+.point-summary-header {
+  font-size: 1.25em;
+  text-align: center;
+  margin-bottom: 1.5em;
+}
+
+.point-summary-body>tbody>tr>td {
+  border: 0;
+  padding: 4px 0;
+}
+
+.point-obtained {
+  text-align: right;
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.rounded-btn {
+  width: 100%;
+  line-height: 30px;
+  border-radius: 100px;
+  font-weight: bold;
+  font-size: 14px;
+  display: table;
+  margin: 0 auto;
+}
+/* Score Summary */
+
+
+</style>
+
+<script>
+$(document).ready(function(){
+  $('[data-toggle="popover"]').popover()
+})
+</script>
