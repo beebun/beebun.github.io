@@ -69,7 +69,7 @@
     <div class="container p-t-md">
       <div class="row">
         <div class="col-md-3">
-          <div class="panel panel-default panel-profile m-b-md">
+          <div id="profile" class="panel panel-default panel-profile m-b-0">
             <div class="panel-body text-center">
               <a href="">
                 <img class="panel-profile-img" src="https://dl.dropboxusercontent.com/u/50922049/Photos%20of%20Me/Professional%20Tong.jpg">
@@ -92,12 +92,17 @@
               </ul>
             </div>
           </div>
+          <div class="text-center">
+            <a href="./version">v1.2.3</a>
+          </div>
         </div>
         <div class="col-md-6">
           <ul class="list-group media-list media-list-stream">
             <li class="media list-group-item">
               <div class="media-body">
                 <div class="media-body-text text-center">
+                  <!-- [SyncTemplate] Add text to language file -->
+                  <!-- You have no Daily Quest to do yet. Check back again tomorrow <span class="icon icon-emoji-flirt"></span> -->
                   <any i18n="home.empty_daily_quest_message">You have no Daily Quest to do yet. Check back again tomorrow <span class="icon icon-emoji-flirt"></span></any>
                 </div>
               </div>
@@ -174,7 +179,7 @@
             <li class="media list-group-item">
               <div class="media-body">
                 <div class="media-body-text text-center">
-                  <a href="javascript:;"><span class="icon icon-arrow-with-circle-down"></span> <any i18n="home.view_more">View More</any></a>
+                  <a href="javascript:;"><span class="icon icon-arrow-with-circle-down"></span> <any i18n="home.view_more_label">View More</any></a>
                 </div>
               </div>
             </li>

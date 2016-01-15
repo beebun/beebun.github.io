@@ -69,7 +69,9 @@
     <div class="container p-t-md">
       <div class="row">
         <div class="col-md-3">
-          <div class="panel panel-default panel-profile m-b-md">
+          <!-- [SyncTemplate] Update to sync with home.html -->
+          <!-- <div class="panel panel-default panel-profile m-b-md"> -->
+          <div id="profile" class="panel panel-default panel-profile m-b-0">
             <div class="panel-body text-center">
               <a href="">
                 <img class="panel-profile-img" src="https://dl.dropboxusercontent.com/u/50922049/Photos%20of%20Me/Professional%20Tong.jpg">
@@ -92,6 +94,11 @@
               </ul>
             </div>
           </div>
+          <!-- [SyncTemplate] Version -->
+          <div class="text-center">
+            <a href="./version">v1.2.3</a>
+          </div>
+          <!-- [SyncTemplate] Version -->
         </div>
         <div class="col-md-6">
           <ul class="list-group media-list media-list-stream">
@@ -109,12 +116,14 @@
             <li class="media list-group-item">
               <div class="media-body">
                 <div class="media-body-text">
-                  <!-- [SyncTemplate] Use language file for text -->
-                  <strong><any i18n="version.whats_new">What's New</any></strong> <small>10 ม.ค. 2559</small>
+                  <!-- [SyncTemplate] Add text to language file -->
+                  <!-- <strong>What's New</strong> <small>10 ม.ค. 2559</small> -->
+                  <strong><any i18n="version.whats_new_label">What's New</any></strong> <small>10 ม.ค. 2559</small>
                   <br>- เพิ่มฟังก์ชัน Add to Home Screen ทำให้เพิ่ม app icon ลงบนโทรศัพท์ได้ผ่านบราวเซอร์ Chrome บน Android และ Safari บน iOS
                   <hr>
-                  <!-- [SyncTemplate] Use language file for text -->
-                  <strong><any i18n="version.version">Version</any></strong> <small>10 ม.ค. 2559</small>
+                  <!-- [SyncTemplate] Add text to language file -->
+                  <!-- <strong>Version</strong> <small>10 ม.ค. 2559</small> -->
+                  <strong><any i18n="version.version_label">Version</any></strong> <small>10 ม.ค. 2559</small>
                   <br>- เพิ่มหน้า Version สำหรับดูรายละเอียดการอัพเดท app
                   <br>- เพิ่มหน้า Help สำหรับ คำถามที่พบบ่อย (FAQ) และ วิธีติดต่อ flipped Team
                 </div>
