@@ -136,11 +136,12 @@
 		function save_data_to_sheet(){
 			var url = 'https://script.google.com/macros/s/AKfycby4_cpxO8GstE84NChXjd7J_je3Vz6HvszXH6eEBJQtrmPJtp8/exec';
 			$.ajax({
-				type: "GET",
+				type: "POST",
+				dataType: 'jsonp',
 				url: url,
 				data: {'Date': '12-Mar-2016', 'Finished time': '16:06:00'},
 				success: function(result){
-					console.log(result);
+
 				}
 			});
 		}
