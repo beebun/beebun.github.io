@@ -74,7 +74,6 @@
 
 		function stop(force){
 			if(typeof(force) == "undefined"){
-				alert("You have finished Pomodoro");
 				finish_pom_count += 1;
 				$('#finish-label').show();
 				setTimeout(function() {
@@ -82,6 +81,7 @@
 				}, 15000);
 				$('#finish-pom-count').html(finish_pom_count);
 				save_data_to_sheet();
+				alert("You have finished Pomodoro");
 			}
 			clearInterval(timer);
 			$('#running-label').hide();
@@ -103,7 +103,7 @@
 				}
 				calculate_countdown_timer();
 				if(running_time%(alert_interval*60) == 0){
-					console.log("Alert!!!");
+					// console.log("Alert!!!");
 				}
 			}, 1000);
 		}
@@ -133,7 +133,7 @@
 			var googleSpreadsheet = new GoogleSpreadsheet();
 			googleSpreadsheet.url(url);
 			googleSpreadsheet.load(function(result) {
-				console.log(result);
+				// console.log(result);
 			});
 		}
 
@@ -193,7 +193,6 @@
       function handleAuthResult(authResult) {
         var authorizeDiv = document.getElementById('authorize-div');
         if (authResult && !authResult.error) {
-
           init();
           // Hide auth UI, then load client library.
           authorizeDiv.style.display = 'none';
