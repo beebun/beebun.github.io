@@ -1,1 +1,123 @@
-Hi there
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Hacking Saturday: Week01 - Pomodoro</title>
+  <meta name="description" content="hacking-saturday-week01">
+  <meta name="author" content="flippedTeam">
+
+  <!--[if lt IE 9]>
+  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+  	<style type="text/css">
+		.hide{
+			display: none;
+	  	}
+	</style>
+</head>
+
+<body>
+	
+	<center>
+		<div id="timeslot">
+			<h3>Time slot</h3>
+			<label><input type="radio" onclick="change_slot()" name="selected_slot" value="0.2"> 12s (for testing)</label>
+			<label><input type="radio" id="selected-slot1" onclick="change_slot()" name="selected_slot" value="1"> 1m</label>
+			<label><input type="radio" onclick="change_slot()" name="selected_slot" value="25"> 25m</label>
+			<label><input type="radio" onclick="change_slot()" name="selected_slot" value="50"> 50m</label>
+			<br/><br/>
+		</div>
+		<button id="start-pom-btn" onclick="start()"><h1>Start Pomodoro</h1></button>
+		<div id="running-label" class="hide">
+			<h1>Pomodoro is running</h1>
+			<h1 id="timer" class=""><span id="countdown-minutes"></span>:<span id="countdown-seconds"></span></h1>
+			<br/>
+			<button id="stop-pom-btn" onclick="stop(true)"><h3>Stop Pomodoro</h3></button>
+		</div>
+		<div id="finish-label" class="hide">
+			<h1 style="color:green">You have finished Pomodoro.</h1>
+		</div>
+		<div id="total-pomodoro" class="hide">
+			<h3>Total Pomodoro: <span id="finish-pom-count"></span></h3>
+		</div>
+	</center>
+
+
+
+	<script src="js/jquery-2.2.1.min.js"></script>
+	<script>
+		var finish_pom_count = 0;
+		var timeslot = 0.3; // in minutes
+		var alert_interval = 0.1; // in minutes
+		var running_time = 0;
+		var finish_time = null;
+		var timer = null
+
+		var countdown = {
+			'minutes': 0,
+			'seconds': 0
+		};
+
+		function calculate_countdown_timer(){
+			var time_left = timeslot*60 - running_time;
+			countdown['minutes'] = ('0' + parseInt(time_left/60)).slice(-2)
+			countdown['seconds'] = ('0' + time_left%60).slice(-2);;
+			$('#countdown-minutes').html(countdown['minutes']);
+			$('#countdown-seconds').html(countdown['seconds']);
+		}
+
+		function stop(force){
+			if(typeof(force) == "undefined"){
+				alert("You have finished Pomodoro");
+				finish_pom_count += 1;
+				$('#finish-label').show();
+				$('#finish-pom-count').html(finish_pom_count);
+			}
+			clearInterval(timer);
+			$('#running-label').hide();
+			$('#timeslot').show();
+			$('#start-pom-btn').show();
+			if(finish_pom_count > 0) $('#total-pomodoro').show();
+		}
+
+		function run(){
+			$('#total-pomodoro').hide();
+			$('#start-pom-btn').hide();
+			$('#running-label').show();
+			$('#timeslot').hide();
+			calculate_countdown_timer();
+			timer = setInterval(function(){ 
+				running_time += 1;
+				if(running_time == finish_time){
+					stop();
+				}
+				calculate_countdown_timer();
+				if(running_time%(alert_interval*60) == 0){
+					console.log("Alert!!!");
+				}
+			}, 1000);
+		}
+
+		function start(){
+			$('#finish-label').hide();
+			$('#running-label').hide();
+			running_time = 0;
+			finish_time = 60*timeslot;
+			run();
+		}
+
+		function init(){
+			$("#selected-slot1").attr('checked', 'checked');
+			timeslot = $('input[name="selected_slot"]:checked').val();
+		}
+
+		function change_slot(){
+			timeslot = $('input[name="selected_slot"]:checked').val();
+		}
+
+		init();
+	</script>
+</body>
+</html>
