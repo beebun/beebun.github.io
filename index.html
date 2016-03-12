@@ -21,26 +21,28 @@
 <body>
 	
 	<center>
-		<div id="timeslot">
-			<h3>Time slot</h3>
-			<label><input type="radio" onclick="change_slot()" name="selected_slot" value="0.2"> 12s (for testing)</label>
-			<label><input type="radio" id="selected-slot1" onclick="change_slot()" name="selected_slot" value="1"> 1m</label>
-			<label><input type="radio" onclick="change_slot()" name="selected_slot" value="25"> 25m</label>
-			<label><input type="radio" onclick="change_slot()" name="selected_slot" value="50"> 50m</label>
-			<br/><br/>
-		</div>
-		<button id="start-pom-btn" onclick="start()"><h1>Start Pomodoro</h1></button>
-		<div id="running-label" class="hide">
-			<h1>Pomodoro is running</h1>
-			<h1 id="timer" class=""><span id="countdown-minutes"></span>:<span id="countdown-seconds"></span></h1>
-			<br/>
-			<button id="stop-pom-btn" onclick="stop(true)"><h3>Stop Pomodoro</h3></button>
-		</div>
-		<div id="finish-label" class="hide">
-			<h1 style="color:green">You have finished Pomodoro.</h1>
-		</div>
-		<div id="total-pomodoro" class="hide">
-			<h3>Total Pomodoro: <span id="finish-pom-count"></span></h3>
+		<div id="pomodoro" class="hide">
+			<div id="timeslot">
+				<h3>Time slot</h3>
+				<label><input type="radio" onclick="change_slot()" name="selected_slot" value="0.2"> 12s (for testing)</label>
+				<label><input type="radio" id="selected-slot1" onclick="change_slot()" name="selected_slot" value="1"> 1m</label>
+				<label><input type="radio" onclick="change_slot()" name="selected_slot" value="25"> 25m</label>
+				<label><input type="radio" onclick="change_slot()" name="selected_slot" value="50"> 50m</label>
+				<br/><br/>
+			</div>
+			<button id="start-pom-btn" onclick="start()"><h1>Start Pomodoro</h1></button>
+			<div id="running-label" class="hide">
+				<h1>Pomodoro is running</h1>
+				<h1 id="timer" class=""><span id="countdown-minutes"></span>:<span id="countdown-seconds"></span></h1>
+				<br/>
+				<button id="stop-pom-btn" onclick="stop(true)"><h3>Stop Pomodoro</h3></button>
+			</div>
+			<div id="finish-label" class="hide">
+				<h1 style="color:green">You have finished Pomodoro.</h1>
+			</div>
+			<div id="total-pomodoro" class="hide">
+				<h3>Total Pomodoro: <span id="finish-pom-count"></span></h3>
+			</div>
 		</div>
 	</center>
 
@@ -115,6 +117,7 @@
 		}
 
 		function init(){
+			$('#pomodoro').show();
 			$("#selected-slot1").attr('checked', 'checked');
 			timeslot = $('input[name="selected_slot"]:checked').val();
 		}
@@ -158,7 +161,6 @@
 		}
 		// 81536791437-5pcbmv304l8rpkpm4tebop2g3g712lrm.apps.googleusercontent.com
 		// c4Ypo2K20DnhyZg8whFSngUZ
-		init();
 	</script>
 
 <!-- https://script.google.com/macros/s/AKfycby4_cpxO8GstE84NChXjd7J_je3Vz6HvszXH6eEBJQtrmPJtp8/exec -->
@@ -191,6 +193,8 @@
       function handleAuthResult(authResult) {
         var authorizeDiv = document.getElementById('authorize-div');
         if (authResult && !authResult.error) {
+
+          init();
           // Hide auth UI, then load client library.
           authorizeDiv.style.display = 'none';
           // callScriptFunction();
@@ -291,13 +295,15 @@
     <script src="https://apis.google.com/js/client.js?onload=checkAuth">
     </script>
 
+    <center>
     <div id="authorize-div" style="display: none">
-      <span>Authorize access to Google Apps Script Execution API</span>
+      <h1 style="color:red"><strong>Authorize access to Google Apps Script Execution API</strong></h1>
       <!--Button for the user to click to initiate auth sequence -->
       <button id="authorize-button" onclick="handleAuthClick(event)">
-        Authorize
+        <h1>Authorize</h1>
       </button>
     </div>
+    </center>
     <pre id="output"></pre>
 
 </body>
