@@ -1,309 +1,61 @@
 <!doctype html>
-
 <html lang="en">
 <head>
   <meta charset="utf-8">
-
-  <title>Hacking Saturday: Week01 - Pomodoro</title>
-  <meta name="description" content="hacking-saturday-week01">
-  <meta name="author" content="flippedTeam">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bun Suwanparsert's Blog</title>
+  <meta name="description" content="Site for AWS References">
+  <meta name="author" content="Bun Suwanparsert">
+  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet"
+    href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.4/css/bootstrap.min.css"
+    integrity="sha384-2hfp1SzUoho7/TsGGGDaFdsuuDL0LX2hnUp6VkX3CUQ2K4K+xjboZdsXyp4oUHZj"
+    crossorigin="anonymous">
 
   <!--[if lt IE 9]>
-  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
   <![endif]-->
-  	<style type="text/css">
-		.hide{
-			display: none;
-	  	}
-	</style>
 </head>
-
 <body>
-	
-	<center>
-		<div id="pomodoro" class="hide">
-			<div id="timeslot">
-				<h3>Time slot</h3>
-				<label><input type="radio" onclick="change_slot()" name="selected_slot" value="0.2"> 12s (for testing)</label>
-				<label><input type="radio" id="selected-slot1" onclick="change_slot()" name="selected_slot" value="1"> 1m</label>
-				<label><input type="radio" onclick="change_slot()" name="selected_slot" value="25"> 25m</label>
-				<label><input type="radio" onclick="change_slot()" name="selected_slot" value="50"> 50m</label>
-				<br/><br/>
-			</div>
-			<button id="start-pom-btn" onclick="start()"><h1>Start Pomodoro</h1></button>
-			<div id="running-label" class="hide">
-				<h1>Pomodoro is running</h1>
-				<h1 id="timer" class=""><span id="countdown-minutes"></span>:<span id="countdown-seconds"></span></h1>
-				<br/>
-				<button id="stop-pom-btn" onclick="stop(true)"><h3>Stop Pomodoro</h3></button>
-			</div>
-			<div id="finish-label" class="hide">
-				<h1 style="color:green">You have finished Pomodoro.</h1>
-			</div>
-			<div id="total-pomodoro" class="hide">
-				<h3>Total Pomodoro: <span id="finish-pom-count"></span></h3>
-			</div>
-		</div>
-	</center>
-
-
-
-	<script src="js/jquery-2.2.1.min.js"></script>
-	<script src="js/google-spreadsheet.js"></script>
-	<script>
-		var finished_time = [];
-		var finish_pom_count = 0;
-		var timeslot = 0.3; // in minutes
-		var alert_interval = 0.1; // in minutes
-		var running_time = 0;
-		var finish_time = null;
-		var timer = null
-
-		var countdown = {
-			'minutes': 0,
-			'seconds': 0
-		};
-
-		function calculate_countdown_timer(){
-			var time_left = timeslot*60 - running_time;
-			countdown['minutes'] = ('0' + parseInt(time_left/60)).slice(-2)
-			countdown['seconds'] = ('0' + time_left%60).slice(-2);;
-			$('#countdown-minutes').html(countdown['minutes']);
-			$('#countdown-seconds').html(countdown['seconds']);
-		}
-
-		function stop(force){
-			if(typeof(force) == "undefined"){
-				finish_pom_count += 1;
-				$('#finish-label').show();
-				setTimeout(function() {
-					$('#finish-label').hide();
-				}, 15000);
-				$('#finish-pom-count').html(finish_pom_count);
-				save_data_to_sheet();
-				alert("You have finished Pomodoro");
-			}
-			clearInterval(timer);
-			$('#running-label').hide();
-			$('#timeslot').show();
-			$('#start-pom-btn').show();
-			if(finish_pom_count > 0) $('#total-pomodoro').show();
-		}
-
-		function run(){
-			$('#total-pomodoro').hide();
-			$('#start-pom-btn').hide();
-			$('#running-label').show();
-			$('#timeslot').hide();
-			calculate_countdown_timer();
-			timer = setInterval(function(){ 
-				running_time += 1;
-				if(running_time == finish_time){
-					stop();
-				}
-				calculate_countdown_timer();
-				if(running_time%(alert_interval*60) == 0){
-					// console.log("Alert!!!");
-				}
-			}, 1000);
-		}
-
-		function start(){
-			$('#finish-label').hide();
-			$('#running-label').hide();
-			running_time = 0;
-			finish_time = 60*timeslot;
-			run();
-		}
-
-		function init(){
-			$('#pomodoro').show();
-			$("#selected-slot1").attr('checked', 'checked');
-			timeslot = $('input[name="selected_slot"]:checked').val();
-		}
-
-		function change_slot(){
-			timeslot = $('input[name="selected_slot"]:checked').val();
-		}
-
-		function get_data_from_sheet(){
-			var sample_url = "http://spreadsheets.google.com/feeds/list/19kDSj3OoCfLje4CQ0jlg3nMDEG6T4W4CIVdiRtj9uUc/od6/public/basic?alt=json-in-script";
-			var url_parameter = document.location.search.split(/\?url=/)[1]
-			var url = url_parameter || sample_url;
-			var googleSpreadsheet = new GoogleSpreadsheet();
-			googleSpreadsheet.url(url);
-			googleSpreadsheet.load(function(result) {
-				// console.log(result);
-			});
-		}
-
-		function save_data_to_sheet(){
-			var date = new Date();
-			var hours = date.getHours();
-			var minutes = date.getMinutes();
-			var seconds = date.getSeconds()%60;
-			hours = hours < 10 ? '0'+hours : hours;
-			minutes = minutes < 10 ? '0'+minutes : minutes;
-			seconds = seconds < 10 ? '0'+seconds : seconds;
-			var strTime = hours + ':' + minutes + ':' + seconds;
-			var month_names_short = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
-
-			var d = date.getDate() + ' ' + month_names_short[date.getMonth()] + ' ' + date.getFullYear();
-			var ft = strTime;
-			var url = 'https://script.google.com/macros/s/AKfycby4_cpxO8GstE84NChXjd7J_je3Vz6HvszXH6eEBJQtrmPJtp8/exec';
-			$.ajax({
-				type: "POST",
-				dataType: 'jsonp',
-				url: url,
-				data: {'Date': d, 'Finished time': ft},
-				success: function(result){}
-			});
-		}
-		// 81536791437-5pcbmv304l8rpkpm4tebop2g3g712lrm.apps.googleusercontent.com
-		// c4Ypo2K20DnhyZg8whFSngUZ
-	</script>
-
-<!-- https://script.google.com/macros/s/AKfycby4_cpxO8GstE84NChXjd7J_je3Vz6HvszXH6eEBJQtrmPJtp8/exec -->
-
-
-	<script type="text/javascript">
-      // Your Client ID can be retrieved from your project in the Google
-      // Developer Console, https://console.developers.google.com
-      var CLIENT_ID = '81536791437-5pcbmv304l8rpkpm4tebop2g3g712lrm.apps.googleusercontent.com';
-
-      var SCOPES = ['https://www.googleapis.com/auth/drive'];
-
-      /**
-       * Check if current user has authorized this application.
-       */
-      function checkAuth() {
-        gapi.auth.authorize(
-          {
-            'client_id': CLIENT_ID,
-            'scope': SCOPES.join(' '),
-            'immediate': true
-          }, handleAuthResult);
-      }
-
-      /**
-       * Handle response from authorization server.
-       *
-       * @param {Object} authResult Authorization result.
-       */
-      function handleAuthResult(authResult) {
-        var authorizeDiv = document.getElementById('authorize-div');
-        if (authResult && !authResult.error) {
-          init();
-          // Hide auth UI, then load client library.
-          authorizeDiv.style.display = 'none';
-          // callScriptFunction();
-        } else {
-          // Show auth UI, allowing the user to initiate authorization by
-          // clicking authorize button.
-          authorizeDiv.style.display = 'inline';
-        }
-      }
-
-      /**
-       * Initiate auth flow in response to user clicking authorize button.
-       *
-       * @param {Event} event Button click event.
-       */
-      function handleAuthClick(event) {
-        gapi.auth.authorize(
-          {client_id: CLIENT_ID, scope: SCOPES, immediate: false},
-          handleAuthResult);
-        return false;
-      }
-
-      /**
-       * Calls an Apps Script function to list the folders in the user's
-       * root Drive folder.
-       */
-      function callScriptFunction() {
-        var scriptId = "ENTER_YOUR_SCRIPT_ID_HERE";
-
-        // Create an execution request object.
-        var request = {
-            'function': 'getFoldersUnderRoot'
-            };
-
-        // Make the API request.
-        var op = gapi.client.request({
-            'root': 'https://script.googleapis.com',
-            'path': 'v1/scripts/' + scriptId + ':run',
-            'method': 'POST',
-            'body': request
-        });
-
-        op.execute(function(resp) {
-          if (resp.error && resp.error.status) {
-            // The API encountered a problem before the script
-            // started executing.
-            appendPre('Error calling API:');
-            appendPre(JSON.stringify(resp, null, 2));
-          } else if (resp.error) {
-            // The API executed, but the script returned an error.
-
-            // Extract the first (and only) set of error details.
-            // The values of this object are the script's 'errorMessage' and
-            // 'errorType', and an array of stack trace elements.
-            var error = resp.error.details[0];
-            appendPre('Script error message: ' + error.errorMessage);
-
-            if (error.scriptStackTraceElements) {
-              // There may not be a stacktrace if the script didn't start
-              // executing.
-              appendPre('Script error stacktrace:');
-              for (var i = 0; i < error.scriptStackTraceElements.length; i++) {
-                var trace = error.scriptStackTraceElements[i];
-                appendPre('\t' + trace.function + ':' + trace.lineNumber);
-              }
-            }
-          } else {
-            // The structure of the result will depend upon what the Apps
-            // Script function returns. Here, the function returns an Apps
-            // Script Object with String keys and values, and so the result
-            // is treated as a JavaScript object (folderSet).
-            var folderSet = resp.response.result;
-            if (Object.keys(folderSet).length == 0) {
-                appendPre('No folders returned!');
-            } else {
-              appendPre('Folders under your root folder:');
-              Object.keys(folderSet).forEach(function(id){
-                appendPre('\t' + folderSet[id] + ' (' + id  + ')');
-              });
-            }
-          }
-        });
-      }
-
-      /**
-       * Append a pre element to the body containing the given message
-       * as its text node.
-       *
-       * @param {string} message Text to be placed in pre element.
-       */
-      function appendPre(message) {
-        var pre = document.getElementById('output');
-        var textContent = document.createTextNode(message + '\n');
-        pre.appendChild(textContent);
-      }
-
-    </script>
-    <script src="https://apis.google.com/js/client.js?onload=checkAuth">
-    </script>
-
-    <center>
-    <div id="authorize-div" style="display: none">
-      <h1 style="color:red"><strong>Authorize access to Google Apps Script Execution API</strong></h1>
-      <!--Button for the user to click to initiate auth sequence -->
-      <button id="authorize-button" onclick="handleAuthClick(event)">
-        <h1>Authorize</h1>
-      </button>
+  <nav class="navbar navbar-full navbar-light bg-faded">
+    <div class="nav navbar-nav">
+      <a class="navbar-brand" href="index.html">Home</a>
+      <a class="nav-item nav-link" target="_blank" href="https://th.linkedin.com/in/bun-suwanparsert-49083457
+">Linkedin</a>
+      <a class="nav-item nav-link" href="contact.html">Contact</a>
     </div>
-    </center>
-    <pre id="output"></pre>
-
+  </nav>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-2"></div>
+      <div class="col-md-8">
+        <br/>
+        <h3>AWS Resources</h4>
+        <hr>
+        <strong>[EC2] Upgrade/Downgrade EC2 instance</strong><br/>
+        <a href="http://stackoverflow.com/questions/5898308/how-to-safely-upgrade-an-amazon-ec2-instance-from-t1-micro-to-large">
+          http://stackoverflow.com/questions/5898308/how-to-safely-upgrade-an-amazon-ec2-instance-from-t1-micro-to-large</a>
+        <br/><br/>
+        <strong>[S3] Download files from S3 bucket</strong><br/>
+        <a href="http://stackoverflow.com/questions/8659382/downloading-an-entire-s3-bucket">
+          http://stackoverflow.com/questions/8659382/downloading-an-entire-s3-bucket</a>
+        <br/><br/>
+        <strong>[S3] AngularJS 1 on S3/CloudFront issue with Safari</strong><br/>
+        <a href="http://stackoverflow.com/questions/35139659/angular-on-aws-cloudfront-s3-for-safari">
+          http://stackoverflow.com/questions/35139659/angular-on-aws-cloudfront-s3-for-safari</a>
+        <br/><br/>
+        <strong>[ELB] Redirect HTTP requests to HTTPS</strong><br/>
+        <a href="https://oanhnn.github.io/2016-02-29/how-to-force-https-behind-aws-elb.html">
+          https://oanhnn.github.io/2016-02-29/how-to-force-https-behind-aws-elb.html</a>
+        <br/><a href="http://stackoverflow.com/questions/24508312/adding-ssl-communication-between-elb-ec2-on-aws-and-forcing-only-https-comunicat">
+          http://stackoverflow.com/questions/24508312/adding-ssl-communication-between-elb-ec2-on-aws-and-forcing-only-https-comunicat</a>
+        <br/><a href="http://stackoverflow.com/questions/26962066/aws-ssl-https-on-load-balancer?rq=1">
+          http://stackoverflow.com/questions/26962066/aws-ssl-https-on-load-balancer?rq=1</a>
+        <br/><br/>
+        <small>Last updated: 23 Sep 2016</small>
+      </div>
+      <div class="col-md-2"></div>
+    </div>
+  </div>
 </body>
 </html>
