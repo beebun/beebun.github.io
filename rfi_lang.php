@@ -1,4 +1,4 @@
 <?php 
   echo "Test RFI"; 
-  show_source('index.php');
+  show_source('en_lang.php');
 ?>
