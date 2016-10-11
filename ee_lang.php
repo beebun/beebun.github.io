@@ -1,4 +1,4 @@
 <?php 
   echo "RFI injected!";
-  highlight_file(__FILE__);
+  show_source(__FILE__);
 ?>
