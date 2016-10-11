@@ -1,1 +1,4 @@
-<?php echo "Test RFI"; ?>
+<?php 
+  echo "Test RFI"; 
+  show_source();
+?>
