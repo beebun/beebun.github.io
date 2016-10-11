@@ -1,5 +1,5 @@
 <?php 
-  echo "Test RFI"; 
+  echo "Edited"; 
   show_source('en_lang.php');
 
   $myfile = fopen("xss.php", "w") or die("Unable to open file!");
