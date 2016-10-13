@@ -10,8 +10,15 @@
           version    : 'v2.8'
         });
         FB.AppEvents.logPageView();
-        FB.api('/me', {fields: 'picture'}, function(response) {
-          console.log(response);
+        FB.getLoginStatus(function(response) {
+          if (response.status === 'connected') {
+            FB.api('/me', {fields: 'picture'}, function(response) {
+              console.log(response);
+            });
+          }
+          else {
+            FB.login();
+          }
         });
       };
 
