@@ -19,6 +19,11 @@
          js.src = "//connect.facebook.net/en_US/sdk.js";
          fjs.parentNode.insertBefore(js, fjs);
        }(document, 'script', 'facebook-jssdk'));
+       
+       FB.api('/me', {fields: 'picture'}, function(response) {
+        console.log(response);
+      });
+      
     </script>
     <div class="fb-login-button" auto_logout_link="true" data-max-rows="1" scope="public_profile" data-size="xlarge" data-show-faces="true" data-auto-logout-link="false"></div>
   </body>
