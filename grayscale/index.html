@@ -7,7 +7,7 @@
         filter: gray; /* IE6-9 */
         filter: grayscale(1); /* W3C */
       }
-      #rendered-image, #fb-root {
+      #rendered-image {
         width:500px;
         margin: 0px auto;
       }
@@ -18,11 +18,13 @@
       #header {
         text-align:center;
       }
+      .fb_iframe_widget {
+         display: block !important;
+      }
     </style>
   </head>
   <body>
     <h2 id="header"><u>Make Image Grayscale</u></h2>
-    <div id="fb-root"></div>
     <script>
       window.fbAsyncInit = function() {
         FB.init({
@@ -55,6 +57,7 @@
     </script>
     <div id="fb-login-btn" class="fb-login-button" onlogin="window.fbAsyncInit()" data-max-rows="1" scope="public_profile" data-size="xlarge" data-show-faces="true" data-auto-logout-link="false"></div>
     <div id="rendered-image"></div>
-    <div id="image-desc"><h4>Right Click => Save Image As...</h4></div>
+    <div id="image-desc"><h4>Right Click => Save Image As...</h4><br/></div>
+    <div id="fb-root"></div>
   </body>
 </html>
