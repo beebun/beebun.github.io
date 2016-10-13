@@ -67,9 +67,10 @@
             FB.api('/me/picture?width=500', function(response) {
               toDataUrl(response.data.url, function(base64Img) {
                 console.log(base64Img);
+                document.getElementById('rendered-image').innerHTML = "<img src='" + base64Img + "' />";
               });
               
-              document.getElementById('rendered-image').innerHTML = "<img src='" + response.data.url + "' />";
+//               document.getElementById('rendered-image').innerHTML = "<img src='" + response.data.url + "' />";
               document.getElementById('image-desc').style.display = 'block';
             });
           }
