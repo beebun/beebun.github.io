@@ -46,7 +46,7 @@
           canvas.width = this.width;
           ctx.drawImage(this, 0, 0);
           
-          var imageData = ctx.getImageData(0,0, imgWidth, imgHeight);
+          var imageData = ctx.getImageData(0,0, this.width, this.height);
           for (j=0; j<imageData.height; i++){
             for (i=0; i<imageData.width; j++){
               var index=(i*4)*imageData.width+(j*4);
