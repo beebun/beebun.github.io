@@ -21,6 +21,7 @@
     </style>
   </head>
   <body>
+    <h2><u>Make Image Grayscale</u></h2>
     <div id="fb-root"></div>
     <script>
       window.fbAsyncInit = function() {
@@ -34,7 +35,7 @@
           if (response.status === 'connected') {
             FB.api('/me/picture?width=500', function(response) {
               document.getElementById('rendered-image').innerHTML = "<img src='" + response.data.url + "' />";
-              document.getElementById('rendered-image').style.display = 'block';
+              document.getElementById('image-desc').style.display = 'block';
             });
           }
           else {
