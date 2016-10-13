@@ -59,13 +59,13 @@
         var myCanvas=document.createElement("canvas");
         var myCanvasContext=myCanvas.getContext("2d");
 
-        var imgWidth=image.width;
-        var imgHeight=image.height;
+        var imgWidth=this.width;
+        var imgHeight=this.height;
         // You'll get some string error if you fail to specify the dimensions
         myCanvas.width= imgWidth;
         myCanvas.height=imgHeight;
         //  alert(imgWidth);
-        myCanvasContext.drawImage(image,0,0);
+        myCanvasContext.drawImage(this,0,0);
 
         // This function cannot be called if the image is not rom the same domain.
         // You'll get security error if you do.
