@@ -36,13 +36,13 @@
           var canvas = document.createElement('CANVAS');
           var ctx = canvas.getContext('2d');
           var dataURL;
-          canvas.height = this.height;
-          canvas.width = this.width;
+          canvas.height = 500;
+          canvas.width = 500;
           ctx.drawImage(this, 0, 0);
-          var imageData = ctx.getImageData(0,0, this.width, this.height);
-          for (j=0; j<this.height; j++){
-            for (i=0; i<this.width; i++){
-              var index=(i*4)*this.width+(j*4);
+          var imageData = ctx.getImageData(0,0, 500, 500);
+          for (j=0; j<500; j++){
+            for (i=0; i<500; i++){
+              var index=(i*4)*500+(j*4);
               var red=imageData.data[index];
               var green=imageData.data[index+1];
               var blue=imageData.data[index+2];
