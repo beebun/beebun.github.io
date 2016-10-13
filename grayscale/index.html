@@ -11,6 +11,9 @@
         width:500px;
         margin: 0px auto;
       }
+      #fb-root {
+        text-align:center;
+      }
     </style>
   </head>
   <body>
@@ -31,7 +34,8 @@
             });
           }
           else {
-            FB.login();
+            document.getElementById('fb-login-btn').click();
+//             FB.login();
           }
         });
       };
@@ -45,7 +49,7 @@
        }(document, 'script', 'facebook-jssdk'));
       
     </script>
-    <div class="fb-login-button" data-max-rows="1" scope="public_profile" data-size="xlarge" data-show-faces="true" data-auto-logout-link="false"></div>
+    <div id="fb-login-btn" class="fb-login-button" data-max-rows="1" scope="public_profile" data-size="xlarge" data-show-faces="true" data-auto-logout-link="false"></div>
     <div id="rendered-image"></div>
   </body>
 </html>
