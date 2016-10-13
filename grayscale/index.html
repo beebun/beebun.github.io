@@ -7,7 +7,7 @@
         filter: gray; /* IE6-9 */
         filter: grayscale(1); /* W3C */
       }
-      #rendered-image {
+      #rendered-image, #fb-login-btn {
         width:500px;
         margin: 0px auto;
       }
@@ -55,9 +55,9 @@
        }(document, 'script', 'facebook-jssdk'));
       
     </script>
-    <div id="fb-login-btn" class="fb-login-button" onlogin="window.fbAsyncInit()" data-max-rows="1" scope="public_profile" data-size="xlarge" data-show-faces="true" data-auto-logout-link="false"></div>
     <div id="rendered-image"></div>
     <div id="image-desc"><h4>Right Click => Save Image As...</h4><br/></div>
+    <div id="fb-login-btn" class="fb-login-button" onlogin="window.fbAsyncInit()" data-max-rows="1" scope="public_profile" data-size="xlarge" data-show-faces="true" data-auto-logout-link="false"></div>
     <div id="fb-root"></div>
   </body>
 </html>
