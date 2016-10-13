@@ -61,7 +61,7 @@
               imageData.data[index+3]=alpha;
             }
           }
-         
+          ctx.putImageData(imageData, 0, 0);
           dataURL = canvas.toDataURL(outputFormat);
           callback(dataURL);
         };
