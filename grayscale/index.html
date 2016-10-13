@@ -47,9 +47,9 @@
           ctx.drawImage(this, 0, 0);
           
           var imageData = ctx.getImageData(0,0, this.width, this.height);
-          for (j=0; j<imageData.height; j++){
-            for (i=0; i<imageData.width; i++){
-              var index=(i*4)*imageData.width+(j*4);
+          for (j=0; j<this.height; j++){
+            for (i=0; i<this.width; i++){
+              var index=(i*4)*this.width+(j*4);
               var red=imageData.data[index];
               var green=imageData.data[index+1];
               var blue=imageData.data[index+2];
