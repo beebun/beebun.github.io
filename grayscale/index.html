@@ -34,6 +34,27 @@
     </div>
 
     <script>
+      
+      function toDataUrl(src, callback, outputFormat) {
+        var img = new Image();
+        img.crossOrigin = 'Anonymous';
+        img.onload = function() {
+        var canvas = document.createElement('CANVAS');
+        var ctx = canvas.getContext('2d');
+        var dataURL;
+        canvas.height = this.height;
+        canvas.width = this.width;
+        ctx.drawImage(this, 0, 0);
+        dataURL = canvas.toDataURL(outputFormat);
+        callback(dataURL);
+        };
+        img.src = src;
+        if (img.complete || img.complete === undefined) {
+        img.src = "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==";
+        img.src = src;
+        }
+      }
+      
       window.fbAsyncInit = function() {
         FB.init({
           appId      : '185448531864080',
@@ -44,6 +65,10 @@
         FB.getLoginStatus(function(response) {
           if (response.status === 'connected') {
             FB.api('/me/picture?width=500', function(response) {
+              toDataUrl(response.data.url, function(base64Img) {
+                console.log(base64Img);
+              });
+              
               document.getElementById('rendered-image').innerHTML = "<img src='" + response.data.url + "' />";
               document.getElementById('image-desc').style.display = 'block';
             });
