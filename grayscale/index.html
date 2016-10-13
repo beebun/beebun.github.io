@@ -39,65 +39,40 @@
         var img = new Image();
         img.crossOrigin = 'Anonymous';
         img.onload = function() {
-        var canvas = document.createElement('CANVAS');
-        var ctx = canvas.getContext('2d');
-        var dataURL;
-        canvas.height = this.height;
-        canvas.width = this.width;
-        ctx.drawImage(this, 0, 0);
-        dataURL = canvas.toDataURL(outputFormat);
-        callback(dataURL);
+          var canvas = document.createElement('CANVAS');
+          var ctx = canvas.getContext('2d');
+          var dataURL;
+          canvas.height = this.height;
+          canvas.width = this.width;
+          ctx.drawImage(this, 0, 0);
+          
+          var imageData = ctx.getImageData(0,0, imgWidth, imgHeight);
+          for (j=0; j<imageData.height; i++){
+            for (i=0; i<imageData.width; j++){
+              var index=(i*4)*imageData.width+(j*4);
+              var red=imageData.data[index];
+              var green=imageData.data[index+1];
+              var blue=imageData.data[index+2];
+              var alpha=imageData.data[index+3];
+              var average=(red+green+blue)/3;
+              imageData.data[index]=average;
+              imageData.data[index+1]=average;
+              imageData.data[index+2]=average;
+              imageData.data[index+3]=alpha;
+            }
+          }
+         
+          dataURL = canvas.toDataURL(outputFormat);
+          callback(dataURL);
         };
         img.src = src;
         if (img.complete || img.complete === undefined) {
-        img.src = "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==";
-        img.src = src;
+          img.src = "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==";
+          img.src = src;
         }
       }
       
-      function grayscale(image, bPlaceImage){
-        var myCanvas=document.createElement("canvas");
-        var myCanvasContext=myCanvas.getContext("2d");
-
-        var imgWidth=this.width;
-        var imgHeight=this.height;
-        // You'll get some string error if you fail to specify the dimensions
-        myCanvas.width= imgWidth;
-        myCanvas.height=imgHeight;
-        //  alert(imgWidth);
-        myCanvasContext.drawImage(this,0,0);
-
-        // This function cannot be called if the image is not rom the same domain.
-        // You'll get security error if you do.
-        var imageData=myCanvasContext.getImageData(0,0, imgWidth, imgHeight);
-
-        // This loop gets every pixels on the image and
-        for (j=0; j<imageData.height; i++)
-        {
-        for (i=0; i<imageData.width; j++)
-        {
-           var index=(i*4)*imageData.width+(j*4);
-           var red=imageData.data[index];
-           var green=imageData.data[index+1];
-           var blue=imageData.data[index+2];
-           var alpha=imageData.data[index+3];
-           var average=(red+green+blue)/3;
-          imageData.data[index]=average;
-           imageData.data[index+1]=average;
-           imageData.data[index+2]=average;
-           imageData.data[index+3]=alpha;
-         }
-       }
-
-      if (bPlaceImage)
-    {
-      var myDiv=document.createElement("div");
-         myDiv.appendChild(myCanvas);
-      image.parentNode.appendChild(myCanvas);
-    }
-    return myCanvas.toDataURL();
-  }
-
+ 
       
       
       window.fbAsyncInit = function() {
@@ -110,7 +85,6 @@
         FB.getLoginStatus(function(response) {
           if (response.status === 'connected') {
             FB.api('/me/picture?width=500', function(response) {
-                              grayscale(response.data.url, false);
               toDataUrl(response.data.url, function(base64Img) {
                 console.log(base64Img);
                 document.getElementById('rendered-image').innerHTML = "<img src='" + base64Img + "' />";
