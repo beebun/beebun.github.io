@@ -14,6 +14,10 @@
       #fb-root {
         text-align:center;
       }
+      #image-desc {
+        text-align:center;
+        display:none;
+      }
     </style>
   </head>
   <body>
@@ -29,13 +33,12 @@
         FB.getLoginStatus(function(response) {
           if (response.status === 'connected') {
             FB.api('/me/picture?width=500', function(response) {
-              console.log(response);
               document.getElementById('rendered-image').innerHTML = "<img src='" + response.data.url + "' />";
+              document.getElementById('rendered-image').style.display = 'block';
             });
           }
           else {
-            document.getElementById('fb-login-btn').click();
-//             FB.login();
+            
           }
         });
       };
@@ -51,5 +54,6 @@
     </script>
     <div id="fb-login-btn" class="fb-login-button" onlogin="window.fbAsyncInit()" data-max-rows="1" scope="public_profile" data-size="xlarge" data-show-faces="true" data-auto-logout-link="false"></div>
     <div id="rendered-image"></div>
+    <div id="image-desc"><h4>Right Click => Save Image As...</h4></div>
   </body>
 </html>
