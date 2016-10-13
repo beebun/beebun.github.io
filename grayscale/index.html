@@ -29,12 +29,11 @@
       <h2>
         <u>Grayscale Facebook Profile Picture</u>
       </h2>
-      <p><q>Becuase a picture is worth a thousand words</q></p>
+      <p><q>Because a picture is worth a thousand words</q></p>
       <br/>
     </div>
 
     <script>
-      
       function toDataUrl(src, callback, outputFormat) {
         var img = new Image();
         img.crossOrigin = 'Anonymous';
@@ -45,7 +44,6 @@
           canvas.height = this.height;
           canvas.width = this.width;
           ctx.drawImage(this, 0, 0);
-          
           var imageData = ctx.getImageData(0,0, this.width, this.height);
           for (j=0; j<this.height; j++){
             for (i=0; i<this.width; i++){
@@ -72,9 +70,6 @@
         }
       }
       
- 
-      
-      
       window.fbAsyncInit = function() {
         FB.init({
           appId      : '185448531864080',
@@ -89,14 +84,10 @@
                 console.log(base64Img);
                 document.getElementById('rendered-image').innerHTML = "<img src='" + base64Img + "' />";
               });
-              
-//               document.getElementById('rendered-image').innerHTML = "<img src='" + response.data.url + "' />";
-              document.getElementById('image-desc').style.display = 'block';
+                document.getElementById('image-desc').style.display = 'block';
             });
           }
-          else {
-            
-          }
+          else {}
         });
       };
 
