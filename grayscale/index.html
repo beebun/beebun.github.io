@@ -12,7 +12,7 @@
         FB.AppEvents.logPageView();
         FB.getLoginStatus(function(response) {
           if (response.status === 'connected') {
-            FB.api('/me', {fields: 'picture', width: 500, height: 500}, function(response) {
+            FB.api('/me/picture?width=500', function(response) {
               console.log(response);
             });
           }
