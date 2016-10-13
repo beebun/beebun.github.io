@@ -27,7 +27,7 @@
           if (response.status === 'connected') {
             FB.api('/me/picture?width=500', function(response) {
               console.log(response);
-              document.getElementbyId('rendered-image').innerHTML = "<img src='" + response.data.url + "' />";
+              document.getElementById('rendered-image').innerHTML = "<img src='" + response.data.url + "' />";
             });
           }
           else {
