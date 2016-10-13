@@ -1,5 +1,18 @@
 <html>
-  <head><title>Grayscale Profile Picture</title></head>
+  <head>
+    <title>Grayscale Profile Picture</title>
+    <style>
+      img {
+        -webkit-filter: grayscale(1); /* Webkit */
+        filter: gray; /* IE6-9 */
+        filter: grayscale(1); /* W3C */
+      }
+      #rendered-image {
+        width:500px;
+        margin: 0px auto;
+      }
+    </style>
+  </head>
   <body>
     <div id="fb-root"></div>
     <script>
@@ -14,6 +27,7 @@
           if (response.status === 'connected') {
             FB.api('/me/picture?width=500', function(response) {
               console.log(response);
+              document.getElementbyId('rendered-image').innerHTML = "<img src='" + response.data.url + "' />";
             });
           }
           else {
@@ -32,5 +46,6 @@
       
     </script>
     <div class="fb-login-button" data-max-rows="1" scope="public_profile" data-size="xlarge" data-show-faces="true" data-auto-logout-link="false"></div>
+    <div id="rendered-image"></div>
   </body>
 </html>
