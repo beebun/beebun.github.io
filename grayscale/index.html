@@ -29,20 +29,20 @@
     </div>
 
     <script>
-      function toDataUrl(src, callback, outputFormat) {
+      function toDataUrl(src, width, height, callback, outputFormat) {
         var img = new Image();
         img.crossOrigin = 'Anonymous';
         img.onload = function() {
           var canvas = document.createElement('CANVAS');
           var ctx = canvas.getContext('2d');
           var dataURL;
-          canvas.height = 500;
-          canvas.width = 500;
+          canvas.height = height;
+          canvas.width = width;
           ctx.drawImage(this, 0, 0);
-          var imageData = ctx.getImageData(0,0, 500, 500);
-          for (j=0; j<500; j++){
-            for (i=0; i<500; i++){
-              var index=(i*4)*500+(j*4);
+          var imageData = ctx.getImageData(0,0, width, height);
+          for (j=0; j<height; j++){
+            for (i=0; i<width; i++){
+              var index=(i*4)*width+(j*4);
               var red=imageData.data[index];
               var green=imageData.data[index+1];
               var blue=imageData.data[index+2];
@@ -75,8 +75,7 @@
         FB.getLoginStatus(function(response) {
           if (response.status === 'connected') {
             FB.api('/me/picture?width=500', function(response) {
-              toDataUrl(response.data.url, function(base64Img) {
-                console.log(base64Img);
+              toDataUrl(response.data.url, response.data.width, response.data.height, function(base64Img) {
                 document.getElementById('rendered-image').innerHTML = "<img src='" + base64Img + "' />";
               });
                 document.getElementById('image-desc').style.display = 'block';
